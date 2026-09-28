@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>บทเรียน | CLICKWISE</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="nav-wrap">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-icon">
+                🛡️
+            </div>
+
+            <div class="brand-text">
+                <strong>CLICKWISE</strong>
+                <span>เรียนรู้เทคโนโลยีอย่างปลอดภัย</span>
+            </div>
+
+        </a>
+
+
+<nav class="main-nav">
+
+    <a href="index.html">หน้าแรก</a>
+
+    <a href="student.html">ข้อมูลผู้เรียน</a>
+
+    <a href="guide.html">คำแนะนำ</a>
+
+    <a href="objective.html">จุดประสงค์</a>
+
+    <a href="pretest.html">ก่อนเรียน</a>
+
+    <a href="lesson.html">บทเรียน</a>
+
+    <a href="activity.html">กิจกรรม</a>
+
+    <a href="posttest.html">หลังเรียน</a>
+
+    <a href="creator.html">ผู้จัดทำ</a>
+
+</nav>
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="container lesson-container">
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="lesson-intro">
+
+    <span class="lesson-label">
+        LEARNING CONTENT
+    </span>
+
+<h1>
+    ความปลอดภัยในการใช้งาน<br>
+    เทคโนโลยีสารสนเทศ
+</h1>
+
+        <p>
+            เรียนรู้เกี่ยวกับอันตรายจากการใช้งานอินเทอร์เน็ต
+            การใช้งานอย่างปลอดภัย การกำหนดรหัสผ่าน
+	       อันตรายจากมัลแวร์ และแนวทางในการป้องกันตนเอง
+        </p>
+
+
+        <!-- ข้อมูลผู้เรียน -->
+
+        <div
+            id="studentInfo"
+            class="student-info"
+        ></div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LESSON NAVIGATION
+    ====================================================== -->
+
+    <section class="lesson-layout">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="lesson-sidebar">
+
+            <div class="sidebar-title">
+                📚 เนื้อหาบทเรียน
+            </div>
+
+
+            <button
+                class="lesson-menu active"
+                onclick="openLesson(1,this)"
+            >
+
+                <span>01</span>
+
+                <div>
+                    <strong>
+                        อันตรายจากอินเทอร์เน็ต
+                    </strong>
+
+                    <small>
+                        รู้ทันภัยออนไลน์
+                    </small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="lesson-menu"
+                onclick="openLesson(2,this)"
+            >
+
+                <span>02</span>
+
+                <div>
+                    <strong>
+                        พ.ร.บ. คอมพิวเตอร์
+                    </strong>
+
+                    <small>
+                        ใช้อย่างถูกต้อง
+                    </small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="lesson-menu"
+                onclick="openLesson(3,this)"
+            >
+
+                <span>03</span>
+
+                <div>
+                    <strong>
+                        ใช้อินเทอร์เน็ตปลอดภัย
+                    </strong>
+
+                    <small>
+                        พร้อมตั้งรหัสผ่าน
+                    </small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="lesson-menu"
+                onclick="openLesson(4,this)"
+            >
+
+                <span>04</span>
+
+                <div>
+                    <strong>
+                        รู้จักมัลแวร์
+                    </strong>
+
+                    <small>
+                        โปรแกรมอันตราย
+                    </small>
+                </div>
+
+            </button>
+
+
+            <button
+                class="lesson-menu"
+                onclick="openLesson(5,this)"
+            >
+
+                <span>05</span>
+
+                <div>
+                    <strong>
+                        ป้องกันมัลแวร์
+                    </strong>
+
+                    <small>
+                        ตรวจสอบและป้องกัน
+                    </small>
+                </div>
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             LESSON CONTENT
+        ================================================== -->
+
+        <div class="lesson-content">
+
+
+            <!-- =================================================
+                 LESSON 1
+            ================================================== -->
+
+            <article
+                id="lesson1"
+                class="lesson-page active"
+            >
+
+                <div class="lesson-heading">
+
+                    <span class="chapter-number">
+                        บทที่ 1
+                    </span>
+
+                    <h2>
+                        🌐 อันตรายจากการใช้งานอินเทอร์เน็ต
+                    </h2>
+
+                    <p>
+                        การใช้งานอินเทอร์เน็ตต้องมีความระมัดระวังอยู่เสมอ
+                        เพราะนอกจากประโยชน์ที่ได้รับแล้ว
+                        อินเทอร์เน็ตยังอาจก่อให้เกิดอันตรายแก่ผู้ใช้งานได้
+                    </p>
+
+                </div>
+
+
+
+                <!-- 1 -->
+
+                <div class="lesson-topic-detail">
+
+                    <div class="topic-number pink-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            🚫 การเผยแพร่ข้อมูลที่ไม่เหมาะสม
+                        </h3>
+
+                        <p>
+                            การเผยแพร่ข้อมูลที่ไม่เหมาะสม
+                            เช่น ข้อมูลที่ไม่ดี
+                            หรือข้อมูลที่ทำให้ผู้อื่นได้รับความเสียหาย
+                            และเสื่อมเสีย
+                            เป็นสิ่งที่ควรหลีกเลี่ยงในการใช้งานอินเทอร์เน็ต
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 2 -->
+
+                <div class="lesson-topic-detail">
+
+                    <div class="topic-number yellow-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            🕵️ การล่อลวงเยาวชน
+                        </h3>
+
+                        <p>
+                            การล่อลวงเยาวชนเกิดขึ้นได้
+                            โดยเฉพาะกับการพูดคุย
+                            ในโปรแกรมสนทนาผ่านอินเทอร์เน็ต
+                            ผู้ใช้งานจึงควรระมัดระวัง
+                            เมื่อติดต่อกับบุคคลที่ไม่รู้จัก
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 3 -->
+
+                <div class="lesson-topic-detail">
+
+                    <div class="topic-number blue-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            🎣 การหลอกลวงแบบฟิชชิง
+                        </h3>
+
+                        <p>
+                            การหลอกลวงแบบฟิชชิง
+                            มักมาในรูปแบบของการส่งอีเมล
+                            หรือเว็บไซต์
+                            เพื่อหลอกให้ผู้ใช้เปิดเผยข้อมูลส่วนตัว
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 4 -->
+
+                <div class="lesson-topic-detail">
+
+                    <div class="topic-number mint-number">
+                        04
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            💻 การก่ออาชญากรรมทางอินเทอร์เน็ต
+                        </h3>
+
+                        <p>
+                            เป็นการใช้คอมพิวเตอร์
+                            ในการกระทำความผิด
+                            เพื่อให้ผู้อื่นเดือดร้อน
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- 5 -->
+
+                <div class="lesson-topic-detail">
+
+                    <div class="topic-number purple-number">
+                        05
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            ⚖️ การกระทำผิดกฎหมายโดยรู้เท่าไม่ถึงการณ์
+                        </h3>
+
+                        <p>
+                            การใช้งานคอมพิวเตอร์บางลักษณะ
+                            อาจเป็นการกระทำความผิดตาม
+                            พ.ร.บ. คอมพิวเตอร์
+                            ผู้ใช้งานจึงควรศึกษาข้อกำหนด
+                            และใช้งานอย่างระมัดระวัง
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REMEMBER -->
+
+                <div class="remember-box">
+
+                    <span>💡</span>
+
+                    <div>
+
+                        <strong>
+                            สิ่งที่ควรจำ
+                        </strong>
+
+                        <p>
+                            ก่อนเปิดเผยข้อมูล ติดต่อกับบุคคลอื่น
+                            หรือกดลิงก์ต่าง ๆ บนอินเทอร์เน็ต
+                            ควรพิจารณาความปลอดภัยก่อนเสมอ
+                        </p>
+
+                    </div>
+
+                </div>
+
+<!-- =========================================
+     VIDEO LEARNING : บทที่ 1
+========================================= -->
+
+<section class="lesson-video-card">
+
+    <div class="video-heading">
+        <div class="video-icon">🎬</div>
+
+        <div>
+            <h3>เรียนรู้ผ่านการ์ตูน : รู้ทันภัยออนไลน์</h3>
+            <p>
+                อินเทอร์เน็ตมีทั้งประโยชน์และอันตรายที่เราอาจพบเจอได้
+                มาดูการ์ตูนและสังเกตว่า ตัวละครพบกับภัยออนไลน์อะไร
+                และมีวิธีรับมืออย่างไร
+            </p>
+        </div>
+    </div>
+
+
+    <!-- คำถามก่อนดู -->
+    <div class="watch-guide">
+
+        <div class="watch-guide-title">
+            🔎 ระหว่างดู ลองสังเกต
+        </div>
+
+        <ul>
+            <li>ตัวละครพบเหตุการณ์อะไรบนอินเทอร์เน็ต?</li>
+            <li>สิ่งใดในเหตุการณ์ที่ดูน่าสงสัยหรือไม่ปลอดภัย?</li>
+            <li>หากเหตุการณ์นี้เกิดขึ้นกับเรา เราควรทำอย่างไร?</li>
+        </ul>
+
+    </div>
+
+
+    <!-- VIDEO -->
+    <div class="lesson-video">
+
+        <iframe
+            src="https://www.youtube.com/embed/K8zFT2v99gg"
+            title="การ์ตูนรู้ทันภัยออนไลน์"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <!-- สรุป -->
+    <div class="video-summary">
+
+        <div class="summary-icon">💡</div>
+
+        <div>
+            <h4>จำไว้เสมอ</h4>
+
+            <p>
+                เมื่อพบข้อความ ลิงก์ หรือสิ่งที่น่าสงสัยบนอินเทอร์เน็ต
+                <strong>อย่ารีบคลิก อย่าให้ข้อมูลส่วนตัว และควรตรวจสอบให้แน่ใจก่อน</strong>
+                หากไม่แน่ใจควรขอคำแนะนำจากผู้ปกครองหรือครู
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     เนื้อหาเพิ่มเติม : บทที่ 1
+========================================= -->
+
+<div class="knowledge-section">
+
+    <div class="knowledge-heading">
+        <span class="knowledge-icon">🌐</span>
+        <div>
+            <span class="knowledge-label">LEARN MORE</span>
+            <h3>รู้จักอันตรายจากอินเทอร์เน็ต</h3>
+        </div>
+    </div>
+
+    <p class="knowledge-intro">
+        อินเทอร์เน็ตช่วยให้เราค้นหาความรู้ ติดต่อสื่อสาร
+        ดูวิดีโอ เล่นเกม และทำกิจกรรมต่าง ๆ ได้อย่างสะดวก
+        แต่ในโลกออนไลน์ก็มีอันตรายที่อาจเกิดขึ้นได้
+        ดังนั้นเราจึงควรรู้จักภัยออนไลน์และเรียนรู้วิธีป้องกันตนเอง
+        ก่อนคลิก ก่อนเชื่อ หรือก่อนส่งข้อมูลให้ผู้อื่น
+    </p>
+
+    <div class="knowledge-grid">
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🎣</div>
+            <h4>การหลอกลวงออนไลน์</h4>
+            <p>
+                ผู้ไม่หวังดีอาจส่งข้อความหรือสร้างเว็บไซต์ปลอม
+                เพื่อหลอกให้เราเปิดเผยข้อมูล เช่น ชื่อผู้ใช้ รหัสผ่าน
+                หรือข้อมูลส่วนตัว โดยอาจใช้ข้อความว่า
+                “คุณได้รับรางวัล” หรือ “บัญชีของคุณมีปัญหา”
+                เพื่อทำให้เรารีบกดลิงก์
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">👤</div>
+            <h4>คนแปลกหน้าบนโลกออนไลน์</h4>
+            <p>
+                บุคคลที่พูดคุยกับเราผ่านเกมหรือสื่อสังคมออนไลน์
+                อาจไม่ได้เป็นคนเดียวกับที่แสดงในโปรไฟล์
+                จึงไม่ควรบอกข้อมูลส่วนตัว ส่งรูปส่วนตัว
+                หรือนัดพบคนที่รู้จักเฉพาะทางออนไลน์โดยลำพัง
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🔗</div>
+            <h4>ลิงก์และไฟล์ที่น่าสงสัย</h4>
+            <p>
+                ลิงก์หรือไฟล์จากบุคคลที่ไม่รู้จักอาจนำเราไปยัง
+                เว็บไซต์หลอกลวงหรือมีโปรแกรมที่เป็นอันตราย
+                หากไม่แน่ใจว่าเป็นไฟล์อะไร ไม่ควรรีบเปิดหรือดาวน์โหลด
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">💬</div>
+            <h4>เนื้อหาที่ไม่เหมาะสม</h4>
+            <p>
+                เราอาจพบข้อความ ภาพ วิดีโอ หรือความคิดเห็น
+                ที่ไม่เหมาะสมบนอินเทอร์เน็ต หากพบสิ่งที่ทำให้รู้สึก
+                ไม่สบายใจ ควรหยุดดูและแจ้งผู้ปกครองหรือครู
+            </p>
+        </div>
+
+    </div>
+
+    <div class="scenario-box">
+        <div class="scenario-icon">💭</div>
+        <div>
+            <h4>ลองคิดจากสถานการณ์</h4>
+            <p>
+                ขณะเล่นเกม มีคนที่ไม่รู้จักส่งข้อความมาบอกว่า
+                จะเติมไอเทมให้ฟรี แต่ต้องส่งชื่อผู้ใช้และรหัสผ่านให้ก่อน
+                นักเรียนควรทำอย่างไร?
+            </p>
+        </div>
+    </div>
+
+    <div class="remember-box">
+        <span>💡</span>
+        <div>
+            <h4>จำไว้เสมอ</h4>
+            <p>
+                <strong>ไม่รู้จัก – ไม่รีบเชื่อ – ไม่รีบคลิก – ไม่ให้ข้อมูล</strong>
+                หากพบสิ่งผิดปกติหรือไม่แน่ใจ ควรขอคำแนะนำจากผู้ปกครองหรือครู
+            </p>
+        </div>
+    </div>
+
+</div>
+<!-- INFOGRAPHIC : LESSON 1 -->
+<section class="infographic-section">
+
+    <div class="infographic-title">
+        <span class="infographic-badge">INFOGRAPHIC</span>
+        <h3>🌐 สรุปความรู้บทที่ 1</h3>
+        <p>อันตรายจากการใช้งานอินเทอร์เน็ต</p>
+    </div>
+
+    <div class="infographic-frame">
+        <img
+            src="01.jpg"
+            alt="อินโฟกราฟิกสรุปบทที่ 1 อันตรายจากการใช้งานอินเทอร์เน็ต"
+        >
+    </div>
+
+</section>
+               <!-- QUIZ : LESSON 1 -->
+<div class="mini-quiz lesson-check"
+     data-answer="B"
+     data-explain="การหลอกลวงแบบฟิชชิงมักใช้ข้อความหรือเว็บไซต์ปลอมเพื่อหลอกให้ผู้ใช้เปิดเผยข้อมูลสำคัญ เช่น รหัสผ่านหรือข้อมูลส่วนตัว">
+
+    <div class="check-heading">
+        <div class="check-icon">🎯</div>
+
+        <div>
+            <h3>ตรวจสอบความเข้าใจ</h3>
+            <p>ข้อใดเป็นลักษณะของการหลอกลวงแบบฟิชชิง?</p>
+        </div>
+    </div>
+
+    <div class="check-options">
+
+        <button type="button"
+                class="check-answer"
+                data-choice="A">
+            <span class="choice-letter">A</span>
+            <span>ช่วยเพิ่มความเร็วของอินเทอร์เน็ต</span>
+        </button>
+
+        <button type="button"
+                class="check-answer"
+                data-choice="B">
+            <span class="choice-letter">B</span>
+            <span>หลอกให้ผู้ใช้เปิดเผยข้อมูลส่วนตัว</span>
+        </button>
+
+        <button type="button"
+                class="check-answer"
+                data-choice="C">
+            <span class="choice-letter">C</span>
+            <span>ช่วยป้องกันไวรัสคอมพิวเตอร์</span>
+        </button>
+
+    </div>
+
+    <div class="check-feedback" aria-live="polite"></div>
+
+</div>
+
+
+                <div class="lesson-next">
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openLesson(2)"
+                    >
+                        บทต่อไป →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 LESSON 2
+            ================================================== -->
+
+            <article
+                id="lesson2"
+                class="lesson-page"
+            >
+
+                <div class="lesson-heading">
+
+                    <span class="chapter-number">
+                        บทที่ 2
+                    </span>
+
+                    <h2>
+                        ⚖️ รู้จัก พ.ร.บ. คอมพิวเตอร์
+                    </h2>
+
+                    <p>
+                        ผู้ใช้งานคอมพิวเตอร์หรืออินเทอร์เน็ต
+                        ต้องใช้งานอย่างถูกต้อง
+                        เพราะการกระทำบางอย่างอาจเข้าข่าย
+                        ความผิดตาม พ.ร.บ. คอมพิวเตอร์
+                    </p>
+
+                </div>
+
+
+
+                <!-- SCENARIO -->
+
+                <div class="scenario-box">
+
+                    <div class="scenario-icon">
+                        💭
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            ลองคิดดู
+                        </strong>
+
+                        <p>
+                            หากนักเรียนทราบรหัสผ่านของเพื่อน
+                            นักเรียนสามารถเข้าไปดูข้อมูลของเพื่อน
+                            โดยไม่ขออนุญาตได้หรือไม่?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <h3 class="section-title">
+                    🚨 ตัวอย่างการกระทำที่ควรระวัง
+                </h3>
+
+
+
+                <div class="law-grid">
+
+
+                    <div class="law-card">
+
+                        <span>🔐</span>
+
+                        <div>
+                            <h4>
+                                เข้าถึงระบบคอมพิวเตอร์ของผู้อื่น
+                            </h4>
+
+                            <p>
+                                การเข้าถึงระบบคอมพิวเตอร์
+                                ของผู้อื่นโดยไม่ได้รับอนุญาต
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>📂</span>
+
+                        <div>
+                            <h4>
+                                เข้าถึงข้อมูลของผู้อื่น
+                            </h4>
+
+                            <p>
+                                การเข้าถึงข้อมูลของผู้อื่น
+                                โดยไม่ได้รับอนุญาต
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>✏️</span>
+
+                        <div>
+                            <h4>
+                                แก้ไขหรือทำลายข้อมูล
+                            </h4>
+
+                            <p>
+                                การแก้ไข เปลี่ยนแปลง
+                                หรือทำลายข้อมูลของผู้อื่น
+                                โดยไม่ได้รับอนุญาต
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>⚠️</span>
+
+                        <div>
+                            <h4>
+                                ก่อกวนระบบ
+                            </h4>
+
+                            <p>
+                                การกระทำที่ก่อกวน
+                                การทำงานของระบบคอมพิวเตอร์
+                                ของผู้อื่น
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>🚫</span>
+
+                        <div>
+                            <h4>
+                                เผยแพร่เนื้อหาที่ไม่เหมาะสม
+                            </h4>
+
+                            <p>
+                                การเผยแพร่เนื้อหา
+                                ที่ไม่เหมาะสมผ่านระบบคอมพิวเตอร์
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>🖼️</span>
+
+                        <div>
+                            <h4>
+                                ตัดต่อภาพผู้อื่น
+                            </h4>
+
+                            <p>
+                                การตัดต่อภาพที่ทำให้ผู้อื่น
+                                เสื่อมเสียชื่อเสียง
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>📨</span>
+
+                        <div>
+                            <h4>
+                                ส่งข้อความรบกวน
+                            </h4>
+
+                            <p>
+                                การส่งข้อความหรืออีเมล
+                                ที่ก่อให้เกิดความเดือดร้อนแก่ผู้อื่น
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>🔑</span>
+
+                        <div>
+                            <h4>
+                                เผยแพร่วิธีการเข้าสู่ระบบ
+                            </h4>
+
+                            <p>
+                                การเผยแพร่วิธีการเข้าสู่
+                                ระบบคอมพิวเตอร์ของผู้อื่น
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="law-card">
+
+                        <span>🌐</span>
+
+                        <div>
+                            <h4>
+                                ขโมยข้อมูลบนเครือข่าย
+                            </h4>
+
+                            <p>
+                                การขโมยข้อมูลของผู้อื่น
+                                บนเครือข่ายอินเทอร์เน็ต
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="remember-box">
+
+                    <span>⚖️</span>
+
+                    <div>
+
+                        <strong>
+                            ใช้เทคโนโลยีอย่างรับผิดชอบ
+                        </strong>
+
+                        <p>
+                            ไม่ควรเข้าถึง แก้ไข
+                            ทำลาย หรือเผยแพร่ข้อมูลของผู้อื่น
+                            โดยไม่ได้รับอนุญาต
+                        </p>
+
+                    </div>
+
+                </div>
+
+<!-- =========================================
+     เนื้อหาเพิ่มเติม : บทที่ 2
+========================================= -->
+
+<div class="knowledge-section">
+
+    <div class="knowledge-heading">
+        <span class="knowledge-icon">⚖️</span>
+        <div>
+            <span class="knowledge-label">LEARN MORE</span>
+            <h3>ใช้งานคอมพิวเตอร์อย่างถูกต้องและรับผิดชอบ</h3>
+        </div>
+    </div>
+
+    <p class="knowledge-intro">
+        การใช้งานคอมพิวเตอร์และอินเทอร์เน็ตไม่ได้หมายความว่า
+        เราจะสามารถทำอะไรก็ได้ เพราะการกระทำบนโลกออนไลน์
+        สามารถส่งผลกระทบต่อข้อมูล ระบบคอมพิวเตอร์
+        และบุคคลอื่นได้ เราจึงควรใช้งานเทคโนโลยีอย่างมีความรับผิดชอบ
+        และเคารพสิทธิของผู้อื่น
+    </p>
+
+    <div class="knowledge-grid">
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🔐</div>
+            <h4>ไม่เข้าบัญชีของผู้อื่น</h4>
+            <p>
+                ไม่ควรนำชื่อผู้ใช้หรือรหัสผ่านของบุคคลอื่น
+                ไปเข้าสู่ระบบโดยไม่ได้รับอนุญาต
+                แม้ว่าเจ้าของบัญชีจะเป็นเพื่อนหรือคนที่เรารู้จักก็ตาม
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">📂</div>
+            <h4>ไม่แก้ไขข้อมูลของผู้อื่น</h4>
+            <p>
+                ไม่ควรเข้าไปแก้ไข ลบ หรือเปลี่ยนแปลงข้อมูล
+                ที่ไม่ใช่ของตนเองโดยไม่ได้รับอนุญาต
+                เพราะอาจสร้างความเสียหายแก่เจ้าของข้อมูล
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">📢</div>
+            <h4>คิดก่อนเผยแพร่</h4>
+            <p>
+                ก่อนโพสต์หรือส่งต่อข้อมูล ควรตรวจสอบให้รอบคอบ
+                ไม่ควรนำข้อมูลที่อาจสร้างความเสียหายแก่ผู้อื่น
+                มาเผยแพร่หรือส่งต่อโดยไม่พิจารณา
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🤝</div>
+            <h4>เคารพสิทธิของผู้อื่น</h4>
+            <p>
+                การใช้งานเทคโนโลยีที่ดีควรคำนึงถึงเจ้าของข้อมูล
+                ความเป็นส่วนตัว และผลกระทบที่อาจเกิดขึ้นกับผู้อื่น
+                ก่อนดำเนินการใด ๆ
+            </p>
+        </div>
+
+    </div>
+
+    <div class="scenario-box">
+        <div class="scenario-icon">💭</div>
+        <div>
+            <h4>ลองคิดจากสถานการณ์</h4>
+            <p>
+                เพื่อนลืมออกจากบัญชีบนคอมพิวเตอร์ของโรงเรียน
+                เราจึงสามารถเปิดอ่านข้อความหรือโพสต์ข้อความ
+                แทนเพื่อนได้หรือไม่ เพราะเหตุใด?
+            </p>
+        </div>
+    </div>
+
+    <div class="remember-box">
+        <span>⚖️</span>
+        <div>
+            <h4>ก่อนทำ ลองถามตัวเอง</h4>
+            <p>
+                ข้อมูลนี้เป็นของเราหรือไม่? เจ้าของอนุญาตหรือยัง?
+                และการกระทำของเราจะสร้างความเสียหายให้กับใครหรือไม่?
+            </p>
+        </div>
+    </div>
+
+</div>
+<!-- INFOGRAPHIC : LESSON 2 -->
+<section class="infographic-section">
+
+    <div class="infographic-title">
+        <span class="infographic-badge">INFOGRAPHIC</span>
+        <h3>⚖️ สรุปความรู้บทที่ 2</h3>
+        <p>รู้จัก พ.ร.บ. คอมพิวเตอร์</p>
+    </div>
+
+    <div class="infographic-frame">
+        <img
+            src="02.jpg"
+            alt="อินโฟกราฟิกสรุปบทที่ 2 พ.ร.บ. คอมพิวเตอร์"
+        >
+    </div>
+
+</section>
+
+           <!-- QUIZ : LESSON 2 -->
+<div class="mini-quiz lesson-check"
+     data-answer="C"
+     data-explain="บัญชีของผู้อื่นเป็นข้อมูลส่วนบุคคล เราไม่ควรเข้าใช้งาน อ่านข้อความ หรือเปลี่ยนแปลงข้อมูลโดยไม่ได้รับอนุญาต">
+
+    <div class="check-heading">
+        <div class="check-icon">🎯</div>
+
+        <div>
+            <h3>ตรวจสอบความเข้าใจ</h3>
+            <p>
+                หากเพื่อนลืมออกจากบัญชีของตนเองบนคอมพิวเตอร์ของโรงเรียน
+                นักเรียนควรทำอย่างไร?
+            </p>
+        </div>
+    </div>
+
+    <div class="check-options">
+
+        <button type="button" class="check-answer" data-choice="A">
+            <span class="choice-letter">A</span>
+            <span>เปิดอ่านข้อความของเพื่อนดู</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="B">
+            <span class="choice-letter">B</span>
+            <span>โพสต์ข้อความแกล้งเพื่อนแล้วจึงออกจากระบบ</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="C">
+            <span class="choice-letter">C</span>
+            <span>ไม่เข้าใช้งานบัญชี และแจ้งให้เพื่อนทราบ</span>
+        </button>
+
+    </div>
+
+    <div class="check-feedback" aria-live="polite"></div>
+
+</div>
+
+
+
+                <div class="lesson-next">
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="openLesson(1)"
+                    >
+                        ← ย้อนกลับ
+                    </button>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openLesson(3)"
+                    >
+                        บทต่อไป →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 LESSON 3
+            ================================================== -->
+
+            <article
+                id="lesson3"
+                class="lesson-page"
+            >
+
+                <div class="lesson-heading">
+
+                    <span class="chapter-number">
+                        บทที่ 3
+                    </span>
+
+                    <h2>
+                        🔒 ใช้อินเทอร์เน็ตอย่างไรให้ปลอดภัย
+                    </h2>
+
+                    <p>
+                        การป้องกันอันตรายจากอินเทอร์เน็ต
+                        เริ่มต้นได้จากพฤติกรรมการใช้งาน
+                        ที่เหมาะสมและระมัดระวัง
+                    </p>
+
+                </div>
+
+
+
+                <h3 class="section-title">
+                    🛡️ 8 แนวทางในการใช้อินเทอร์เน็ตอย่างปลอดภัย
+                </h3>
+
+
+
+                <div class="safe-list">
+
+                    <div>
+                        <span>01</span>
+                        <p>
+                            ไม่เปิดเผยข้อมูลส่วนตัว
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>02</span>
+                        <p>
+                            ไม่เผยแพร่ข้อมูลบนอินเทอร์เน็ตโดยง่าย
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>03</span>
+                        <p>
+                            ไม่เข้าชมเว็บไซต์เผยแพร่
+                            เนื้อหาผิดกฎหมาย
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>04</span>
+                        <p>
+                            แจ้งผู้ดูแลหากพบเห็น
+                            การใช้งานอินเทอร์เน็ตที่ไม่เหมาะสม
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>05</span>
+                        <p>
+                            ติดตั้งโปรแกรมป้องกันไวรัส
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>06</span>
+                        <p>
+                            ตั้งรหัสผ่านในการเข้าสู่ระบบ
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>07</span>
+                        <p>
+                            ไม่บอกบุคคลอื่นถึงช่องทางอินเทอร์เน็ต
+                            เพื่อเข้าถึง
+                        </p>
+                    </div>
+
+
+                    <div>
+                        <span>08</span>
+                        <p>
+                            ศึกษาข้อกำหนดเกี่ยวกับ
+                            การใช้งานคอมพิวเตอร์และอินเทอร์เน็ต
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <section class="password-section">
+
+                    <div class="password-title">
+
+                        <span>🔑</span>
+
+                        <div>
+
+                            <h3>
+                                การกำหนดรหัสผ่าน
+                            </h3>
+
+                            <p>
+                                รหัสผ่านเป็นส่วนสำคัญ
+                                ในการป้องกันการเข้าถึงข้อมูล
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="password-columns">
+
+
+                        <!-- GOOD -->
+
+                        <div class="password-good">
+
+                            <h4>
+                                ✅ ข้อแนะนำในการตั้งรหัสผ่าน
+                            </h4>
+
+                            <ul>
+
+                                <li>
+                                    มีความยาวอย่างน้อย
+                                    <strong>8 ตัวอักษร</strong>
+                                </li>
+
+                                <li>
+                                    ประกอบด้วยตัวอักษร
+                                    พิมพ์เล็ก พิมพ์ใหญ่
+                                    และอักขระพิเศษ
+                                </li>
+
+                                <li>
+                                    ตั้งรหัสผ่านให้จดจำได้ง่าย
+                                    แต่คาดเดายาก
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <!-- BAD -->
+
+                        <div class="password-bad">
+
+                            <h4>
+                                ❌ สิ่งที่ไม่ควรนำมาใช้เป็นรหัสผ่าน
+                            </h4>
+
+                            <ul>
+
+                                <li>
+                                    ข้อมูลส่วนตัว
+                                </li>
+
+                                <li>
+                                    ชื่อบุคคลหรือสิ่งของใกล้ตัว
+                                </li>
+
+                                <li>
+                                    คำที่มีอยู่ในพจนานุกรม
+                                </li>
+
+                                <li>
+                                    รูปแบบยอดนิยม เช่น
+                                    <strong>
+                                        111222, 12345, Password
+                                    </strong>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+<!-- =========================================
+     เนื้อหาเพิ่มเติม : บทที่ 3
+========================================= -->
+
+<div class="knowledge-section">
+
+    <div class="knowledge-heading">
+        <span class="knowledge-icon">🛡️</span>
+        <div>
+            <span class="knowledge-label">LEARN MORE</span>
+            <h3>ปกป้องข้อมูลและใช้อินเทอร์เน็ตอย่างปลอดภัย</h3>
+        </div>
+    </div>
+
+    <p class="knowledge-intro">
+        ความปลอดภัยบนอินเทอร์เน็ตเริ่มต้นจากตัวเรา
+        เราควรระมัดระวังข้อมูลที่เปิดเผย เลือกใช้รหัสผ่านที่เหมาะสม
+        และตรวจสอบสิ่งต่าง ๆ ก่อนคลิกหรือกรอกข้อมูล
+        เพราะข้อมูลบางอย่างอาจถูกนำไปใช้ในทางที่ไม่เหมาะสมได้
+    </p>
+
+    <div class="knowledge-grid">
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🙈</div>
+            <h4>ปกป้องข้อมูลส่วนตัว</h4>
+            <p>
+                ไม่ควรเปิดเผยข้อมูลสำคัญแก่คนแปลกหน้า เช่น
+                ที่อยู่ เบอร์โทรศัพท์ รหัสผ่าน หรือตำแหน่งปัจจุบัน
+                และควรคิดก่อนโพสต์ข้อมูลส่วนตัวลงบนพื้นที่สาธารณะ
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🔑</div>
+            <h4>ตั้งรหัสผ่านให้คาดเดายาก</h4>
+            <p>
+                ควรตั้งรหัสผ่านที่มีความยาวเพียงพอ
+                หลีกเลี่ยงข้อมูลที่คาดเดาง่าย เช่น 123456
+                ชื่อเล่น หรือวันเกิด และไม่ควรใช้รหัสผ่านเดียวกัน
+                กับทุกบัญชี
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🔍</div>
+            <h4>ตรวจสอบก่อนคลิก</h4>
+            <p>
+                หากได้รับข้อความหรือลิงก์ที่ไม่คุ้นเคย
+                ควรตรวจสอบผู้ส่งและเว็บไซต์ก่อน
+                โดยเฉพาะข้อความที่เร่งให้กรอกข้อมูลส่วนตัว
+                หรือรหัสผ่านทันที
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">📱</div>
+            <h4>ออกจากระบบเมื่อใช้อุปกรณ์ร่วมกัน</h4>
+            <p>
+                หากใช้งานคอมพิวเตอร์หรืออุปกรณ์ที่มีผู้ใช้หลายคน
+                ควรออกจากระบบเมื่อใช้งานเสร็จ
+                และไม่ควรบันทึกรหัสผ่านไว้ในอุปกรณ์สาธารณะ
+            </p>
+        </div>
+
+    </div>
+
+    <div class="scenario-box">
+        <div class="scenario-icon">💭</div>
+        <div>
+            <h4>ลองคิดจากสถานการณ์</h4>
+            <p>
+                นักเรียนได้รับข้อความว่า
+                “บัญชีของคุณกำลังจะถูกปิด กรุณากดลิงก์นี้
+                และกรอกรหัสผ่านภายใน 5 นาที”
+                นักเรียนควรทำอย่างไร?
+            </p>
+        </div>
+    </div>
+
+    <div class="remember-box">
+        <span>🔐</span>
+        <div>
+            <h4>จำไว้เสมอ</h4>
+            <p>
+                <strong>ข้อมูลของเรา รหัสผ่านของเรา เราต้องช่วยกันปกป้อง</strong>
+                อย่าให้รหัสผ่านแก่ผู้อื่น และตรวจสอบให้แน่ใจก่อนกรอกข้อมูล
+                ลงบนเว็บไซต์
+            </p>
+        </div>
+    </div>
+
+</div>
+<!-- INFOGRAPHIC : LESSON 3 -->
+<section class="infographic-section">
+
+    <div class="infographic-title">
+        <span class="infographic-badge">INFOGRAPHIC</span>
+        <h3>🔒 สรุปความรู้บทที่ 3</h3>
+        <p>ใช้อินเทอร์เน็ตอย่างไรให้ปลอดภัย</p>
+    </div>
+
+    <div class="infographic-frame">
+        <img
+            src="03.jpg"
+            alt="อินโฟกราฟิกสรุปบทที่ 3 การใช้อินเทอร์เน็ตอย่างปลอดภัย"
+        >
+    </div>
+
+</section>
+               <!-- QUIZ : LESSON 3 -->
+<div class="mini-quiz lesson-check"
+     data-answer="B"
+     data-explain="ข้อความที่เร่งให้กดลิงก์และกรอกรหัสผ่านอาจเป็นข้อความหลอกลวง จึงไม่ควรกดลิงก์หรือเปิดเผยรหัสผ่าน และควรตรวจสอบแหล่งที่มาก่อน">
+
+    <div class="check-heading">
+        <div class="check-icon">🎯</div>
+
+        <div>
+            <h3>ตรวจสอบความเข้าใจ</h3>
+            <p>
+                หากได้รับข้อความให้รีบกดลิงก์และกรอกรหัสผ่าน
+                นักเรียนควรทำอย่างไร?
+            </p>
+        </div>
+    </div>
+
+    <div class="check-options">
+
+        <button type="button" class="check-answer" data-choice="A">
+            <span class="choice-letter">A</span>
+            <span>กดลิงก์และกรอกรหัสผ่านทันที</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="B">
+            <span class="choice-letter">B</span>
+            <span>ไม่กดลิงก์ และตรวจสอบแหล่งที่มาก่อน</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="C">
+            <span class="choice-letter">C</span>
+            <span>ส่งลิงก์ให้เพื่อนลองเปิดก่อน</span>
+        </button>
+
+    </div>
+
+    <div class="check-feedback" aria-live="polite"></div>
+
+</div>
+
+
+
+                <div class="lesson-next">
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="openLesson(2)"
+                    >
+                        ← ย้อนกลับ
+                    </button>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openLesson(4)"
+                    >
+                        บทต่อไป →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 LESSON 4
+            ================================================== -->
+
+            <article
+                id="lesson4"
+                class="lesson-page"
+            >
+
+                <div class="lesson-heading">
+
+                    <span class="chapter-number">
+                        บทที่ 4
+                    </span>
+
+                    <h2>
+                        🦠 อันตรายจากการติดตั้งซอฟต์แวร์
+                    </h2>
+
+                    <p>
+                        การนำซอฟต์แวร์ที่อยู่บนอินเทอร์เน็ต
+                        มาติดตั้งลงบนเครื่อง
+                        อาจมีโปรแกรมมัลแวร์แฝงมากับ
+                        โปรแกรมที่ดาวน์โหลดมา
+                    </p>
+
+                </div>
+
+
+
+                <div class="malware-intro">
+
+                    <span>🦠</span>
+
+                    <div>
+
+                        <strong>
+                            มัลแวร์คืออะไร?
+                        </strong>
+
+                        <p>
+                            โปรแกรมมัลแวร์อาจถูกใช้เป็นเครื่องมือ
+                            สำหรับก่ออาชญากรรมทางอินเทอร์เน็ต
+                            โดยมัลแวร์มีหลายประเภท
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MALWARE GRID -->
+
+                <div class="malware-grid">
+
+
+                    <!-- TROJAN -->
+
+                    <div class="malware-card">
+
+                        <div class="malware-icon">
+                            🐴
+                        </div>
+
+                        <span class="malware-number">
+                            01
+                        </span>
+
+                        <h3>
+                            ม้าโทรจัน
+                        </h3>
+
+                        <p>
+                            เป็นโปรแกรมที่หลอกลวง
+                            ให้ผู้ใช้งานติดตั้งและเรียกใช้งาน
+                            แต่เมื่อใช้งานแล้วกลับสร้างปัญหา
+                            ให้กับผู้ใช้ตามที่ผู้เขียนโปรแกรมกำหนดไว้
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- VIRUS -->
+
+                    <div class="malware-card">
+
+                        <div class="malware-icon">
+                            🦠
+                        </div>
+
+                        <span class="malware-number">
+                            02
+                        </span>
+
+                        <h3>
+                            ไวรัสคอมพิวเตอร์
+                        </h3>
+
+                        <p>
+                            โปรแกรมที่เขียนขึ้นเพื่อขัดขวาง
+                            การทำงานของเครื่องคอมพิวเตอร์
+                            ทำให้เกิดความรำคาญ
+                            หรือก่อให้เกิดความเสียหาย
+                            ต่อข้อมูลหรือระบบการทำงาน
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- SPY -->
+
+                    <div class="malware-card">
+
+                        <div class="malware-icon">
+                            🕵️
+                        </div>
+
+                        <span class="malware-number">
+                            03
+                        </span>
+
+                        <h3>
+                            โปรแกรมดักจับข้อมูล
+                        </h3>
+
+                        <p>
+                            โปรแกรมที่ออกแบบมา
+                            โดยมีจุดประสงค์เพื่อดักจับข้อมูล
+                            ระหว่างใช้งานเครื่องคอมพิวเตอร์
+                            เพื่อนำข้อมูลไปใช้
+                            ในการแสวงหาผลประโยชน์ต่าง ๆ
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ADWARE -->
+
+                    <div class="malware-card">
+
+                        <div class="malware-icon">
+                            📢
+                        </div>
+
+                        <span class="malware-number">
+                            04
+                        </span>
+
+                        <h3>
+                            โปรแกรมโฆษณา
+                        </h3>
+
+                        <p>
+                            โปรแกรมที่ทำหน้าที่
+                            ในการแสดงโฆษณาอย่างต่อเนื่อง
+                            หรือดาวน์โหลดโฆษณาอัตโนมัติ
+                            ซึ่งอาจทำให้เกิดความรำคาญ
+                            แก่ผู้ใช้งาน
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- RANSOMWARE -->
+
+                    <div class="malware-card">
+
+                        <div class="malware-icon">
+                            🔐
+                        </div>
+
+                        <span class="malware-number">
+                            05
+                        </span>
+
+                        <h3>
+                            โปรแกรมเรียกค่าไถ่
+                        </h3>
+
+                        <p>
+                            โปรแกรมที่คอยขัดขวาง
+                            การเข้าถึงข้อมูลด้วยการเข้ารหัส
+                            โดยโปรแกรมจะให้รหัสผ่าน
+                            เมื่อผู้ใช้งานจ่ายเงิน
+                            ตามที่โปรแกรมร้องขอ
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- WORM -->
+
+                    <div class="malware-card">
+
+                        <div class="malware-icon">
+                            🪱
+                        </div>
+
+                        <span class="malware-number">
+                            06
+                        </span>
+
+                        <h3>
+                            หนอนอินเทอร์เน็ต
+                        </h3>
+
+                        <p>
+                            โปรแกรมที่คอยหาจุดอ่อน
+                            ของระบบรักษาความปลอดภัย
+                            บนเครื่องคอมพิวเตอร์
+                            และแพร่เข้าสู่คอมพิวเตอร์เครื่องอื่น
+                            ในระบบเครือข่าย
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="remember-box">
+
+                    <span>💡</span>
+
+                    <div>
+
+                        <strong>
+                            ก่อนติดตั้งโปรแกรม
+                        </strong>
+
+                        <p>
+                            ควรระมัดระวังซอฟต์แวร์
+                            ที่ดาวน์โหลดจากอินเทอร์เน็ต
+                            เพราะอาจมีมัลแวร์แฝงมากับโปรแกรม
+                        </p>
+
+                    </div>
+
+                </div>
+
+<!-- =========================================
+     เนื้อหาเพิ่มเติม : บทที่ 4
+========================================= -->
+
+<div class="knowledge-section">
+
+    <div class="knowledge-heading">
+        <span class="knowledge-icon">🦠</span>
+        <div>
+            <span class="knowledge-label">LEARN MORE</span>
+            <h3>มัลแวร์คืออะไร?</h3>
+        </div>
+    </div>
+
+    <p class="knowledge-intro">
+        มัลแวร์ (Malware) มาจากคำว่า Malicious Software
+        หมายถึงซอฟต์แวร์ที่ถูกสร้างขึ้นเพื่อก่อให้เกิดผลที่ไม่พึงประสงค์
+        เช่น รบกวนการทำงานของอุปกรณ์ ทำลายข้อมูล
+        แอบเก็บข้อมูล หรือเปิดโอกาสให้ผู้ไม่หวังดีเข้าถึงอุปกรณ์
+    </p>
+
+    <div class="malware-types">
+
+        <div class="malware-card">
+            <span>🦠</span>
+            <h4>Virus</h4>
+            <p>
+                โปรแกรมที่สามารถติดไปกับไฟล์
+                และอาจแพร่กระจายหรือสร้างความเสียหายต่อข้อมูล
+            </p>
+        </div>
+
+        <div class="malware-card">
+            <span>🐴</span>
+            <h4>Trojan</h4>
+            <p>
+                โปรแกรมที่อาจปลอมตัวให้ดูเหมือนโปรแกรมปกติ
+                เพื่อหลอกให้ผู้ใช้ดาวน์โหลดหรือติดตั้ง
+            </p>
+        </div>
+
+        <div class="malware-card">
+            <span>👁️</span>
+            <h4>Spyware</h4>
+            <p>
+                ซอฟต์แวร์ที่อาจแอบเก็บข้อมูลหรือพฤติกรรม
+                การใช้งานของผู้ใช้โดยที่ผู้ใช้ไม่รู้ตัว
+            </p>
+        </div>
+
+        <div class="malware-card">
+            <span>🔒</span>
+            <h4>Ransomware</h4>
+            <p>
+                มัลแวร์ที่อาจทำให้ผู้ใช้ไม่สามารถเข้าถึงข้อมูล
+                หรือระบบของตนเอง และใช้ข้อมูลนั้นในการเรียกร้องสิ่งตอบแทน
+            </p>
+        </div>
+
+    </div>
+
+    <div class="info-box">
+        <h4>📥 มัลแวร์เข้ามาในอุปกรณ์ได้อย่างไร?</h4>
+        <p>
+            มัลแวร์อาจมาจากการดาวน์โหลดโปรแกรมจากแหล่งที่ไม่น่าเชื่อถือ
+            การเปิดไฟล์แนบที่น่าสงสัย การกดลิงก์หลอกลวง
+            หรือการติดตั้งโปรแกรมโดยไม่ได้ตรวจสอบแหล่งที่มา
+        </p>
+    </div>
+
+    <div class="scenario-box">
+        <div class="scenario-icon">💭</div>
+        <div>
+            <h4>สัญญาณที่ควรสังเกต</h4>
+            <p>
+                หากอุปกรณ์ทำงานช้าผิดปกติ มีหน้าต่างหรือโฆษณาแปลก ๆ
+                ปรากฏขึ้น หรือพบโปรแกรมที่เราไม่ได้ติดตั้งเอง
+                ควรหยุดตรวจสอบและขอความช่วยเหลือจากผู้ที่มีความรู้
+            </p>
+        </div>
+    </div>
+
+    <div class="remember-box">
+        <span>⚠️</span>
+        <div>
+            <h4>อย่าลืม</h4>
+            <p>
+                อาการผิดปกติของอุปกรณ์ไม่ได้หมายความว่าเกิดจากมัลแวร์เสมอไป
+                หากไม่แน่ใจไม่ควรดาวน์โหลดโปรแกรมแปลก ๆ มาแก้ปัญหาด้วยตนเอง
+            </p>
+        </div>
+    </div>
+
+</div>
+<!-- INFOGRAPHIC : LESSON 4 -->
+<section class="infographic-section">
+
+    <div class="infographic-title">
+        <span class="infographic-badge">INFOGRAPHIC</span>
+        <h3>🦠 สรุปความรู้บทที่ 4</h3>
+        <p>รู้จักมัลแวร์และโปรแกรมอันตราย</p>
+    </div>
+
+    <div class="infographic-frame">
+        <img
+            src="04.jpg"
+            alt="อินโฟกราฟิกสรุปบทที่ 4 รู้จักมัลแวร์"
+        >
+    </div>
+
+</section>
+
+        <!-- QUIZ : LESSON 4 -->
+<div class="mini-quiz lesson-check"
+     data-answer="A"
+     data-explain="ไฟล์หรือโปรแกรมจากแหล่งที่ไม่รู้จักอาจมีมัลแวร์แฝงอยู่ จึงควรตรวจสอบแหล่งที่มาก่อนดาวน์โหลดหรือเปิดไฟล์">
+
+    <div class="check-heading">
+        <div class="check-icon">🎯</div>
+
+        <div>
+            <h3>ตรวจสอบความเข้าใจ</h3>
+            <p>
+                ข้อใดเป็นพฤติกรรมที่อาจทำให้อุปกรณ์
+                มีความเสี่ยงต่อมัลแวร์?
+            </p>
+        </div>
+    </div>
+
+    <div class="check-options">
+
+        <button type="button" class="check-answer" data-choice="A">
+            <span class="choice-letter">A</span>
+            <span>เปิดไฟล์ที่ดาวน์โหลดมาจากเว็บไซต์ที่ไม่รู้จัก</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="B">
+            <span class="choice-letter">B</span>
+            <span>อัปเดตระบบและโปรแกรมอย่างสม่ำเสมอ</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="C">
+            <span class="choice-letter">C</span>
+            <span>ตรวจสอบแหล่งที่มาของไฟล์ก่อนเปิด</span>
+        </button>
+
+    </div>
+
+    <div class="check-feedback" aria-live="polite"></div>
+
+</div>
+
+                <div class="lesson-next">
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="openLesson(3)"
+                    >
+                        ← ย้อนกลับ
+                    </button>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openLesson(5)"
+                    >
+                        บทต่อไป →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 LESSON 5
+            ================================================== -->
+
+            <article
+                id="lesson5"
+                class="lesson-page"
+            >
+
+                <div class="lesson-heading">
+
+                    <span class="chapter-number">
+                        บทที่ 5
+                    </span>
+
+                    <h2>
+                        🛡️ การตรวจสอบและป้องกันมัลแวร์
+                    </h2>
+
+                    <p>
+                        เมื่อทราบถึงอันตรายของมัลแวร์แล้ว
+                        นักเรียนควรรู้จักวิธีสังเกตความผิดปกติ
+                        ตรวจสอบ และป้องกันมัลแวร์
+                    </p>
+
+                </div>
+
+
+
+                <!-- CHECK -->
+
+                <h3 class="section-title">
+                    🔍 แนวทางในการตรวจสอบมัลแวร์
+                </h3>
+
+
+                <div class="check-grid">
+
+
+                    <div>
+
+                        <span>⏱️</span>
+
+                        <p>
+                            สังเกตความเร็วของ
+                            อุปกรณ์เทคโนโลยี
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>⚠️</span>
+
+                        <p>
+                            สังเกตความผิดปกติ
+                            ในการใช้งาน
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>📶</span>
+
+                        <p>
+                            ตรวจสอบความเร็วของ
+                            เครือข่ายอินเทอร์เน็ต
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>🔎</span>
+
+                        <p>
+                            เรียกใช้งานโปรแกรม
+                            ตรวจจับมัลแวร์
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROTECT -->
+
+                <h3 class="section-title">
+                    🛡️ แนวทางในการป้องกันมัลแวร์
+                </h3>
+
+
+
+                <div class="protect-list">
+
+
+                    <div class="protect-item">
+
+                        <span>🔌</span>
+
+                        <div>
+
+                            <strong>
+                                ระวังการใช้อุปกรณ์
+                                เชื่อมต่อภายนอก
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="protect-item">
+
+                        <span>📧</span>
+
+                        <div>
+
+                            <strong>
+                                เลี่ยงการเปิดไฟล์แนบ
+                                จากอีเมลที่ไม่รู้จัก
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="protect-item">
+
+                        <span>☁️</span>
+
+                        <div>
+
+                            <strong>
+                                สำรองไฟล์ข้อมูล
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="protect-item">
+
+                        <span>📡</span>
+
+                        <div>
+
+                            <strong>
+                                ระวังการใช้งาน
+                                Wi-Fi สาธารณะ
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="protect-item">
+
+                        <span>🛡️</span>
+
+                        <div>
+
+                            <strong>
+                                ติดตั้งซอฟต์แวร์
+                                ป้องกันมัลแวร์
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="protect-item">
+
+                        <span>🔄</span>
+
+                        <div>
+
+                            <strong>
+                                อัปเดตคอมพิวเตอร์
+                                และซอฟต์แวร์สม่ำเสมอ
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SUMMARY -->
+
+                <div class="lesson-summary">
+
+                    <span class="summary-icon">
+                        🛡️
+                    </span>
+
+                    <div>
+
+                        <span class="summary-label">
+                            SUMMARY
+                        </span>
+
+                        <h3>
+                            สรุปความรู้
+                        </h3>
+
+                        <p>
+                            การใช้งานเทคโนโลยีอย่างปลอดภัย
+                            ต้องรู้เท่าทันอันตรายจากอินเทอร์เน็ต
+                            ใช้งานอย่างระมัดระวัง
+                            ตั้งรหัสผ่านอย่างเหมาะสม
+                            รู้จักอันตรายจากมัลแวร์
+                            และป้องกันอุปกรณ์ของตนเองอยู่เสมอ
+                        </p>
+
+                    </div>
+
+                </div>
+<!-- =========================================
+     เนื้อหาเพิ่มเติม : บทที่ 5
+========================================= -->
+
+<div class="knowledge-section">
+
+    <div class="knowledge-heading">
+        <span class="knowledge-icon">🛡️</span>
+        <div>
+            <span class="knowledge-label">LEARN MORE</span>
+            <h3>ป้องกันมัลแวร์ก่อนเกิดปัญหา</h3>
+        </div>
+    </div>
+
+    <p class="knowledge-intro">
+        การป้องกันมัลแวร์ไม่ได้หมายถึงการติดตั้งโปรแกรมป้องกันไวรัส
+        เพียงอย่างเดียว แต่พฤติกรรมของผู้ใช้งานก็มีความสำคัญ
+        หากเราตรวจสอบก่อนดาวน์โหลด ไม่เปิดไฟล์ที่น่าสงสัย
+        และดูแลอุปกรณ์อย่างสม่ำเสมอ ก็สามารถช่วยลดความเสี่ยงได้
+    </p>
+
+    <div class="knowledge-grid">
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🔄</div>
+            <h4>อัปเดตระบบสม่ำเสมอ</h4>
+            <p>
+                ควรอัปเดตระบบปฏิบัติการ แอปพลิเคชัน
+                และโปรแกรมต่าง ๆ ให้เป็นเวอร์ชันที่ยังได้รับการดูแล
+                เพื่อให้ได้รับการแก้ไขด้านความปลอดภัย
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">📥</div>
+            <h4>ดาวน์โหลดจากแหล่งที่เชื่อถือได้</h4>
+            <p>
+                ก่อนดาวน์โหลดโปรแกรมหรือไฟล์
+                ควรตรวจสอบเว็บไซต์และแหล่งที่มา
+                หลีกเลี่ยงไฟล์จากเว็บไซต์หรือบุคคลที่ไม่น่าเชื่อถือ
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">🔍</div>
+            <h4>ตรวจสอบก่อนเปิด</h4>
+            <p>
+                หากได้รับไฟล์ที่ไม่คุ้นเคย
+                ควรตรวจสอบผู้ส่งและชนิดของไฟล์ก่อนเปิด
+                หากไม่แน่ใจควรสอบถามครู ผู้ปกครอง
+                หรือผู้ดูแลอุปกรณ์
+            </p>
+        </div>
+
+        <div class="knowledge-card">
+            <div class="knowledge-card-icon">💾</div>
+            <h4>สำรองข้อมูลสำคัญ</h4>
+            <p>
+                ควรสำรองไฟล์สำคัญ เช่น เอกสารหรือผลงาน
+                เพื่อช่วยลดความเสียหายหากอุปกรณ์หรือข้อมูลเกิดปัญหา
+            </p>
+        </div>
+
+    </div>
+
+    <div class="info-box">
+        <h4>🚨 ถ้าสงสัยว่าเครื่องมีมัลแวร์ ควรทำอย่างไร?</h4>
+        <p>
+            หยุดเปิดไฟล์หรือลิงก์ที่น่าสงสัย
+            ไม่กรอกข้อมูลสำคัญเพิ่มเติม
+            และแจ้งผู้ปกครอง ครู หรือผู้ดูแลอุปกรณ์ให้ช่วยตรวจสอบ
+            ไม่ควรดาวน์โหลดโปรแกรมแปลก ๆ เพิ่มเพื่อพยายามแก้ปัญหาด้วยตนเอง
+        </p>
+    </div>
+
+    <div class="remember-box">
+        <span>💡</span>
+        <div>
+            <h4>ป้องกันง่ายกว่าตามแก้</h4>
+            <p>
+                <strong>ตรวจสอบก่อนคลิก ตรวจสอบก่อนดาวน์โหลด
+                และอัปเดตอุปกรณ์อย่างสม่ำเสมอ</strong>
+                เป็นพฤติกรรมพื้นฐานที่ช่วยให้เราใช้เทคโนโลยีได้ปลอดภัยขึ้น
+            </p>
+        </div>
+    </div>
+
+</div>
+<!-- =========================================
+     VIDEO LEARNING : สรุปท้ายบทเรียน
+========================================= -->
+
+<section class="lesson-video-card">
+
+    <div class="video-heading">
+
+        <div class="video-icon">▶</div>
+
+        <div>
+            <span class="video-label">VIDEO LEARNING</span>
+
+            <h3>วิดีโอสรุปและทบทวนความรู้</h3>
+
+            <p>
+                รับชมวิดีโอเพื่อทบทวนความรู้
+                เรื่องการใช้งานเทคโนโลยีสารสนเทศอย่างปลอดภัย
+                ก่อนตรวจสอบความเข้าใจท้ายบทเรียน
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="lesson-video">
+
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/qfJZNGuVdIw"
+            title="การใช้งานเทคโนโลยีสารสนเทศอย่างปลอดภัย"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <div class="video-summary">
+
+        <div class="summary-icon">💡</div>
+
+        <div>
+            <h4>ระหว่างรับชม ลองคิดตาม</h4>
+
+            <p>
+                มีพฤติกรรมใดบ้างที่ช่วยให้เราใช้งานอินเทอร์เน็ต
+                และเทคโนโลยีสารสนเทศได้อย่างปลอดภัย?
+            </p>
+        </div>
+
+    </div>
+<!-- INFOGRAPHIC : LESSON 5 -->
+<section class="infographic-section">
+
+    <div class="infographic-title">
+        <span class="infographic-badge">INFOGRAPHIC</span>
+        <h3>🛡️ สรุปความรู้บทที่ 5</h3>
+        <p>การตรวจสอบและป้องกันมัลแวร์</p>
+    </div>
+
+    <div class="infographic-frame">
+        <img
+            src="05.jpg"
+            alt="อินโฟกราฟิกสรุปบทที่ 5 การป้องกันมัลแวร์"
+        >
+    </div>
+
+</section>
+</section>
+<!-- QUIZ : LESSON 5 -->
+<div class="mini-quiz lesson-check"
+     data-answer="C"
+     data-explain="หากได้รับไฟล์แนบจากผู้ส่งที่ไม่รู้จัก ไม่ควรเปิดหรือดาวน์โหลดทันที ควรตรวจสอบผู้ส่งและความน่าเชื่อถือของไฟล์ก่อน">
+
+    <div class="check-heading">
+        <div class="check-icon">🎯</div>
+
+        <div>
+            <h3>ตรวจสอบความเข้าใจ</h3>
+            <p>
+                หากได้รับไฟล์แนบจากอีเมลที่ไม่รู้จัก
+                นักเรียนควรทำอย่างไร?
+            </p>
+        </div>
+    </div>
+
+    <div class="check-options">
+
+        <button type="button" class="check-answer" data-choice="A">
+            <span class="choice-letter">A</span>
+            <span>เปิดไฟล์ทันทีเพื่อดูว่าเป็นไฟล์อะไร</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="B">
+            <span class="choice-letter">B</span>
+            <span>ดาวน์โหลดไฟล์เก็บไว้ในเครื่องก่อน</span>
+        </button>
+
+        <button type="button" class="check-answer" data-choice="C">
+            <span class="choice-letter">C</span>
+            <span>หลีกเลี่ยงการเปิดไฟล์ และตรวจสอบผู้ส่งก่อน</span>
+        </button>
+
+    </div>
+
+    <div class="check-feedback" aria-live="polite"></div>
+
+</div>
+
+
+                <!-- COMPLETE -->
+
+                <div class="lesson-complete">
+
+                    <span>
+                        🎉
+                    </span>
+
+                    <h3>
+                        เรียนจบบทเรียนแล้ว!
+                    </h3>
+
+                    <p>
+                        นักเรียนได้เรียนรู้เนื้อหาครบทั้ง 5 บทแล้ว
+                        ขั้นต่อไปไปทำกิจกรรมเพื่อทบทวน
+                        และนำความรู้ไปใช้กัน
+                    </p>
+
+
+                    <a
+                        href="activity.html"
+                        class="btn btn-primary"
+                    >
+                        ไปทำกิจกรรม →
+                    </a>
+
+                </div>
+
+
+
+                <div class="lesson-next">
+
+                    <button
+                        class="btn btn-secondary"
+                        onclick="openLesson(4)"
+                    >
+                        ← ย้อนกลับ
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            <strong>CLICKWISE</strong>
+            <span>เรียนรู้เทคโนโลยีอย่างปลอดภัย</span>
+        </div>
+
+        <div class="footer-links">
+
+            <button
+                type="button"
+                class="reference-open"
+                onclick="openReference()"
+            >
+                แหล่งอ้างอิง
+            </button>
+
+            <span>•</span>
+
+            <a href="creator.html">
+                ผู้จัดทำ
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     REFERENCE POPUP
+========================================= -->
+
+<div
+    class="reference-modal"
+    id="referenceModal"
+>
+
+    <!-- คลิกพื้นหลังเพื่อปิด -->
+    <div
+        class="reference-overlay"
+        onclick="closeReference()"
+    ></div>
+
+
+    <div class="reference-popup">
+
+        <!-- ปุ่มปิด -->
+        <button
+            type="button"
+            class="reference-close"
+            onclick="closeReference()"
+            aria-label="ปิด"
+        >
+            ×
+        </button>
+
+
+        <!-- หัวข้อ -->
+        <div class="reference-popup-heading">
+
+            <span class="reference-label">
+                REFERENCES
+            </span>
+
+            <h2>
+                แหล่งอ้างอิง
+            </h2>
+
+            <p>
+                แหล่งข้อมูลและสื่อที่ใช้ประกอบการจัดทำบทเรียน
+                เรื่อง ความปลอดภัยในการใช้งานเทคโนโลยีสารสนเทศ
+            </p>
+
+        </div>
+
+
+        <!-- รายการอ้างอิง -->
+        <div class="reference-list">
+
+
+            <!-- 01 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    01
+                </span>
+
+                <div>
+
+                    <strong>
+                        สื่อวิดีโอประกอบบทเรียน
+                    </strong>
+
+                    <p>
+                        วิดีโอจาก YouTube ใช้ประกอบการเรียนรู้
+                        เกี่ยวกับความปลอดภัยและการใช้งานอินเทอร์เน็ต
+                    </p>
+
+                    <a
+                        href="https://youtu.be/K8zFT2v99gg?si=ees-YeCsHO6YlIqx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    02
+                </span>
+
+                <div>
+
+                    <strong>
+                        สื่อวิดีโอประกอบบทเรียน
+                    </strong>
+
+                    <p>
+                        วิดีโอจาก YouTube ใช้ประกอบเนื้อหา
+                        เรื่องความปลอดภัยในการใช้งานเทคโนโลยีสารสนเทศ
+                    </p>
+
+                    <a
+                        href="https://youtu.be/qfJZNGuVdIw?si=51EcJH9w8ktWTAIR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    03
+                </span>
+
+                <div>
+
+                    <strong>
+                        หนังสือและเอกสารประกอบการเรียนรู้
+                    </strong>
+
+                    <p>
+                        เอกสารออนไลน์จาก PUBHTML5
+                        ใช้เป็นแหล่งข้อมูลประกอบเนื้อหาภายในบทเรียน
+                    </p>
+
+                    <a
+                        href="https://online.pubhtml5.com/upse/wwzj/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

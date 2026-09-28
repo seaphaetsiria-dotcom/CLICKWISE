@@ -1,0 +1,10685 @@
+/* =========================================================
+   CLICKWISE — COMPLETE WEBSITE STYLESHEET
+   ใช้กับทุกหน้า
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES
+========================================================= */
+
+:root {
+    --pink: #FFAEBC;
+    --blue: #A0E7E5;
+    --mint: #B4F8C8;
+    --yellow: #FBE7C6;
+
+    --pink-soft: #FFF1F4;
+    --blue-soft: #EEFCFC;
+    --mint-soft: #F0FFF5;
+    --yellow-soft: #FFF9EF;
+
+    --white: #FFFFFF;
+    --cream: #FFFEFA;
+
+    --text: #344054;
+    --text-dark: #263D59;
+    --muted: #667085;
+    --light-text: #98A2B3;
+
+    --border: #E7ECEF;
+
+    --shadow:
+        0 10px 30px
+        rgba(54, 74, 90, 0.08);
+
+    --shadow-hover:
+        0 16px 35px
+        rgba(54, 74, 90, 0.13);
+
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 24px;
+    --radius-xl: 30px;
+
+    --transition: 0.25s ease;
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Sarabun",
+        "Noto Sans Thai",
+        sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFEFA 0%,
+            #FFFFFF 45%,
+            #F9FEFE 100%
+        );
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family:
+        "Sarabun",
+        sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-dark);
+    line-height: 1.35;
+}
+
+p {
+    line-height: 1.8;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   4. GENERAL CONTAINER
+========================================================= */
+
+.container {
+    width: min(1180px, calc(100% - 40px));
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-section {
+    padding: 55px 0 80px;
+}
+
+.page-header {
+    text-align: center;
+
+    max-width: 800px;
+
+    margin:
+        0 auto 35px;
+}
+
+.page-header h1 {
+    margin:
+        8px 0 12px;
+
+    font-size:
+        clamp(30px, 5vw, 46px);
+}
+
+.page-header p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   5. HEADER / NAVBAR
+========================================================= */
+
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border-bottom:
+        1px solid rgba(160, 231, 229, 0.45);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+}
+
+.nav-wrap {
+    width:
+        min(1240px, calc(100% - 32px));
+
+    min-height: 78px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* BRAND */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    flex-shrink: 0;
+}
+
+.brand-icon {
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--mint)
+        );
+
+    font-size: 25px;
+
+    box-shadow:
+        0 7px 17px
+        rgba(160, 231, 229, .3);
+}
+
+.brand-text,
+.brand > div:last-child {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.brand strong {
+    color: var(--text-dark);
+
+    font-size: 18px;
+
+    line-height: 1.2;
+}
+
+.brand span {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* NAV */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 5px;
+
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    position: relative;
+
+    padding:
+        9px 11px;
+
+    border-radius: 11px;
+
+    color: #52606D;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.main-nav a:hover {
+    background: var(--blue-soft);
+
+    color: #28636A;
+}
+
+.main-nav a.active {
+    background: var(--blue);
+
+    color: #244F57;
+}
+
+
+/* =========================================================
+   6. BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 48px;
+
+    padding:
+        12px 24px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    font-family:
+        "Sarabun",
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.btn:active {
+    transform:
+        translateY(0);
+}
+
+.btn-primary {
+    background: var(--blue);
+
+    color: #244F57;
+}
+
+.btn-primary:hover {
+    background: #8FDDDB;
+}
+
+.btn-secondary {
+    background: #F2F4F7;
+
+    color: #475467;
+}
+
+.btn-secondary:hover {
+    background: #E9ECEF;
+}
+
+.btn-pink {
+    background: var(--pink);
+
+    color: #713B47;
+}
+
+.btn-mint {
+    background: var(--mint);
+
+    color: #346047;
+}
+
+.btn-yellow {
+    background: var(--yellow);
+
+    color: #735B31;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+
+/* =========================================================
+   7. GENERAL CARDS
+========================================================= */
+
+.card {
+    background: var(--white);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    padding: 28px;
+
+    box-shadow: var(--shadow);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.soft-card {
+    padding: 25px;
+
+    border-radius: var(--radius-lg);
+}
+
+.pink-bg {
+    background: var(--pink-soft);
+}
+
+.blue-bg {
+    background: var(--blue-soft);
+}
+
+.mint-bg {
+    background: var(--mint-soft);
+}
+
+.yellow-bg {
+    background: var(--yellow-soft);
+}
+
+
+/* =========================================================
+   8. STUDENT INFORMATION
+========================================================= */
+
+.student-info {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    min-height: 40px;
+
+    margin-top: 10px;
+
+    padding:
+        8px 17px;
+
+    border-radius: 999px;
+
+    background: var(--blue-soft);
+
+    color: #3E6970;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   9. HOME PAGE
+========================================================= */
+
+.hero {
+    position: relative;
+
+    min-height:
+        calc(100vh - 78px);
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    padding:
+        70px 0 80px;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(160, 231, 229, .28);
+
+    top: -120px;
+    right: -100px;
+
+    filter: blur(3px);
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 174, 188, .20);
+
+    bottom: -130px;
+    left: -90px;
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.05fr .95fr;
+
+    gap: 55px;
+
+    align-items: center;
+}
+
+.hero-text h1 {
+    margin:
+        12px 0 18px;
+
+    font-size:
+        clamp(38px, 6vw, 65px);
+
+    line-height: 1.2;
+
+    color: var(--text-dark);
+}
+
+.hero-text h1 span {
+    color: #4E9DA2;
+}
+
+.hero-text p {
+    max-width: 650px;
+
+    margin-bottom: 28px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    padding:
+        8px 18px;
+
+    border-radius: 999px;
+
+    background: var(--yellow);
+
+    color: #755D32;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+
+    max-width: 500px;
+
+    filter:
+        drop-shadow(
+            0 20px 30px
+            rgba(58, 80, 95, .12)
+        );
+}
+
+
+/* =========================================================
+   10. STUDENT PAGE / FORM
+========================================================= */
+
+.form-page {
+    padding:
+        55px 0 85px;
+}
+
+.form-card {
+    width: min(680px, 100%);
+
+    margin: auto;
+
+    padding:
+        clamp(25px, 5vw, 45px);
+
+    background: #FFFFFF;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+}
+
+.form-card h1,
+.form-card h2 {
+    text-align: center;
+
+    margin-top: 0;
+}
+
+.form-card > p {
+    text-align: center;
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #475467;
+
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding:
+        12px 15px;
+
+    border:
+        1.5px solid #DDE3E8;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    background: #FFFFFF;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    transition: var(--transition);
+}
+
+.form-group textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(160, 231, 229, .22);
+}
+
+.form-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   11. GUIDE PAGE
+========================================================= */
+
+.guide-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.guide-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    padding: 25px;
+
+    border-radius: 22px;
+
+    background: #FFFFFF;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        0 8px 22px
+        rgba(60, 80, 95, .06);
+}
+
+.guide-number {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--blue);
+
+    color: #2B6269;
+
+    font-weight: 700;
+}
+
+.guide-card h3 {
+    margin:
+        0 0 6px;
+
+    font-size: 19px;
+}
+
+.guide-card p {
+    margin: 0;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   12. OBJECTIVE PAGE
+========================================================= */
+
+.objective-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.objective-card {
+    padding: 28px;
+
+    text-align: center;
+
+    border-radius: 24px;
+
+    background: #FFFFFF;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow: var(--shadow);
+}
+
+.objective-icon {
+    width: 68px;
+    height: 68px;
+
+    margin:
+        0 auto 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: var(--blue-soft);
+
+    font-size: 32px;
+}
+
+.objective-card:nth-child(2) .objective-icon {
+    background: var(--pink-soft);
+}
+
+.objective-card:nth-child(3) .objective-icon {
+    background: var(--mint-soft);
+}
+
+.objective-card h3 {
+    margin:
+        0 0 10px;
+
+    font-size: 20px;
+}
+
+.objective-card p {
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   13. PRETEST / POSTTEST
+========================================================= */
+
+.quiz-container {
+    width: min(850px, calc(100% - 40px));
+
+    margin: auto;
+
+    padding:
+        50px 0 80px;
+}
+
+.quiz-header {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.quiz-header h1 {
+    margin:
+        8px 0 8px;
+
+    font-size:
+        clamp(30px, 5vw, 42px);
+}
+
+.quiz-header p {
+    color: var(--muted);
+}
+
+.quiz-progress {
+    margin-bottom: 25px;
+}
+
+.quiz-progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.progress-bar,
+.progress-track {
+    width: 100%;
+
+    height: 10px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #EDF1F3;
+}
+
+.progress-fill {
+    height: 100%;
+
+    width: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--mint)
+        );
+
+    transition:
+        width .35s ease;
+}
+
+.question-card {
+    padding:
+        clamp(24px, 5vw, 38px);
+
+    background: #FFFFFF;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+}
+
+.question-number {
+    display: inline-block;
+
+    padding:
+        7px 15px;
+
+    margin-bottom: 13px;
+
+    border-radius: 999px;
+
+    background: var(--yellow);
+
+    color: #705A34;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.question-card h2,
+.question-text {
+    margin:
+        0 0 24px;
+
+    color: var(--text-dark);
+
+    font-size:
+        clamp(20px, 4vw, 25px);
+
+    line-height: 1.6;
+}
+
+.choices,
+.answer-list {
+    display: grid;
+
+    gap: 12px;
+}
+
+.choice,
+.choice-btn,
+.answer-option {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding:
+        16px 18px;
+
+    border:
+        1.5px solid var(--border);
+
+    border-radius: 16px;
+
+    background: #FFFFFF;
+
+    color: #475467;
+
+    text-align: left;
+
+    font-size: 16px;
+
+    transition: var(--transition);
+
+    cursor: pointer;
+}
+
+.choice:hover,
+.choice-btn:hover,
+.answer-option:hover {
+    border-color: var(--blue);
+
+    background: var(--blue-soft);
+}
+
+.choice.selected,
+.choice-btn.selected,
+.answer-option.selected {
+    border:
+        2px solid var(--blue);
+
+    background: var(--blue-soft);
+
+    color: #2D6268;
+}
+
+.choice-letter {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #F2F4F7;
+
+    font-weight: 700;
+}
+
+.selected .choice-letter {
+    background: var(--blue);
+}
+
+.quiz-navigation {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   14. LESSON PAGE
+========================================================= */
+
+.lesson-container {
+    padding:
+        45px 0 85px;
+}
+
+
+/* INTRO */
+
+.lesson-intro {
+    width: calc(100% - 140px);
+    max-width: 1250px;
+    min-height: 260px;
+
+    margin: 30px auto 35px;
+    padding: 25px 40px;
+
+    /* จัดเนื้อหาให้อยู่กลางกรอบ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.lesson-label { 
+    display: inline-block;
+
+    padding: 7px 20px;
+    margin: 0 auto 13px;
+
+    border-radius: 999px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.lesson-intro h1 {
+    margin: 0 auto 15px;
+    text-align: center;
+}
+
+.lesson-intro > p {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* LAYOUT */
+
+.lesson-layout {
+    display: grid;
+
+    grid-template-columns:
+        275px minmax(0, 1fr);
+
+    gap: 27px;
+
+    align-items: start;
+
+    width: calc(100% - 80px);
+    max-width: 1500px;
+
+    margin-left: 1px;
+    margin-right: auto;
+}
+
+/* SIDEBAR */
+
+.lesson-sidebar {
+    position: sticky;
+
+    top: 98px;
+
+    padding: 17px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 24px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow);
+}
+
+.sidebar-title {
+    padding:
+        5px 7px 15px;
+
+    color: var(--text-dark);
+
+    font-size: 19px;
+
+    font-weight: 700;
+}
+
+.lesson-menu {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border: 0;
+
+    border-radius: 15px;
+
+    background: transparent;
+
+    color: var(--text);
+
+    text-align: left;
+
+    transition: var(--transition);
+}
+
+.lesson-menu:hover {
+    background: var(--blue-soft);
+
+    transform:
+        translateX(3px);
+}
+
+.lesson-menu > span {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 13px;
+
+    background: #F2F4F7;
+
+    color: #667085;
+
+    font-weight: 700;
+}
+
+.lesson-menu strong {
+    display: block;
+
+    color: #344054;
+
+    font-size: 14px;
+}
+
+.lesson-menu small {
+    display: block;
+
+    margin-top: 1px;
+
+    color: #98A2B3;
+
+    font-size: 11px;
+}
+
+.lesson-menu.active {
+    background: var(--blue-soft);
+}
+
+.lesson-menu.active > span {
+    background: var(--blue);
+
+    color: #285B62;
+}
+
+
+/* CONTENT */
+
+.lesson-content {
+    min-width: 0;
+}
+
+.lesson-page {
+    display: none;
+
+    padding:
+        clamp(24px, 4vw, 43px);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 28px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow);
+}
+
+.lesson-page.active {
+    display: block;
+
+    animation:
+        lessonAppear .35s ease;
+}
+
+@keyframes lessonAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* LESSON HEADING */
+
+.chapter-number {
+    display: inline-block;
+
+    padding:
+        7px 16px;
+
+    border-radius: 999px;
+
+    background: var(--blue);
+
+    color: #285A61;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.lesson-heading h2 {
+    margin:
+        14px 0 9px;
+
+    font-size:
+        clamp(27px, 4vw, 35px);
+}
+
+.lesson-heading p {
+    margin:
+        0 0 28px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+.section-title {
+    margin:
+        34px 0 17px;
+
+    font-size: 21px;
+}
+
+
+/* LESSON TOPIC */
+
+.lesson-topic-detail {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 14px;
+
+    padding: 21px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 19px;
+
+    background: #FFFFFF;
+
+    transition: var(--transition);
+}
+
+.lesson-topic-detail:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(50, 70, 85, .07);
+}
+
+.lesson-topic-detail h3 {
+    margin:
+        0 0 6px;
+
+    font-size: 19px;
+}
+
+.lesson-topic-detail p {
+    margin: 0;
+
+    color: var(--muted);
+}
+
+.topic-number {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-weight: 700;
+}
+
+.pink-number {
+    background: var(--pink-soft);
+    color: #9D4D5C;
+}
+
+.yellow-number {
+    background: var(--yellow-soft);
+    color: #82642F;
+}
+
+.blue-number {
+    background: var(--blue-soft);
+    color: #34747A;
+}
+
+.mint-number {
+    background: var(--mint-soft);
+    color: #397557;
+}
+
+.purple-number {
+    background: #F5F0FF;
+    color: #68509B;
+}
+
+
+/* REMEMBER */
+
+.remember-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    padding: 21px;
+
+    border:
+        1px solid #F1DEB8;
+
+    border-radius: 19px;
+
+    background: var(--yellow-soft);
+}
+
+.remember-box > span {
+    font-size: 29px;
+}
+
+.remember-box strong {
+    color: #70572B;
+
+    font-size: 18px;
+}
+
+.remember-box p {
+    margin:
+        4px 0 0;
+
+    color: #756344;
+}
+
+
+/* SCENARIO */
+
+.scenario-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    padding: 22px;
+
+    border-radius: 19px;
+
+    border-left:
+        5px solid var(--blue);
+
+    background: var(--blue-soft);
+}
+
+.scenario-icon {
+    font-size: 33px;
+}
+
+.scenario-box strong {
+    color: #315F65;
+
+    font-size: 18px;
+}
+
+.scenario-box p {
+    margin:
+        4px 0 0;
+
+    color: #52686B;
+}
+
+
+/* LAW CARDS */
+
+.law-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+}
+
+.law-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 17px;
+
+    background: #FAFBFC;
+
+    transition: var(--transition);
+}
+
+.law-card:hover {
+    transform:
+        translateY(-2px);
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 8px 20px
+        rgba(55, 75, 90, .07);
+}
+
+.law-card > span {
+    font-size: 27px;
+}
+
+.law-card h4 {
+    margin:
+        0 0 4px;
+
+    font-size: 16px;
+}
+
+.law-card p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* SAFE INTERNET */
+
+.safe-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.safe-list > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 75px;
+
+    padding: 16px;
+
+    border-radius: 17px;
+
+    background: var(--blue-soft);
+}
+
+.safe-list span {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: var(--blue);
+
+    color: #2E6268;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.safe-list p {
+    margin: 0;
+
+    color: #4B6266;
+
+    line-height: 1.6;
+}
+
+
+/* PASSWORD */
+
+.password-section {
+    margin-top: 34px;
+
+    padding: 26px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 23px;
+
+    background: #FAFBFC;
+}
+
+.password-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.password-title > span {
+    font-size: 35px;
+}
+
+.password-title h3 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+.password-title p {
+    margin:
+        3px 0 0;
+
+    color: var(--muted);
+}
+
+.password-columns {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.password-good,
+.password-bad {
+    padding: 20px;
+
+    border-radius: 18px;
+}
+
+.password-good {
+    background: var(--mint-soft);
+}
+
+.password-bad {
+    background: var(--pink-soft);
+}
+
+.password-good h4,
+.password-bad h4 {
+    margin-top: 0;
+}
+
+.password-good ul,
+.password-bad ul {
+    padding-left: 22px;
+
+    margin-bottom: 0;
+}
+
+.password-good li,
+.password-bad li {
+    margin-bottom: 9px;
+
+    color: #52616B;
+
+    line-height: 1.65;
+}
+
+
+/* MALWARE */
+
+.malware-intro {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding: 21px;
+
+    border-radius: 19px;
+
+    background: var(--pink-soft);
+}
+
+.malware-intro > span {
+    font-size: 34px;
+}
+
+.malware-intro strong {
+    font-size: 18px;
+}
+
+.malware-intro p {
+    margin:
+        4px 0 0;
+
+    color: var(--muted);
+}
+
+.malware-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.malware-card {
+    position: relative;
+
+    padding: 24px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 21px;
+
+    background: #FAFBFC;
+
+    transition: var(--transition);
+}
+
+.malware-card:hover {
+    transform:
+        translateY(-4px);
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow-hover);
+}
+
+.malware-icon {
+    font-size: 38px;
+}
+
+.malware-number {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    padding:
+        4px 10px;
+
+    border-radius: 999px;
+
+    background: var(--blue-soft);
+
+    color: #3A777C;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.malware-card h3 {
+    margin:
+        10px 0 7px;
+
+    font-size: 19px;
+}
+
+.malware-card p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* CHECK MALWARE */
+
+.check-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+}
+
+.check-grid > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    border-radius: 17px;
+
+    background: var(--blue-soft);
+}
+
+.check-grid span {
+    font-size: 28px;
+}
+
+.check-grid p {
+    margin: 0;
+
+    color: #496267;
+
+    font-weight: 600;
+}
+
+
+/* PROTECTION */
+
+.protect-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.protect-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-height: 72px;
+
+    padding: 17px;
+
+    border-radius: 17px;
+
+    background: var(--mint-soft);
+
+    color: #3D6650;
+}
+
+.protect-item > span {
+    font-size: 28px;
+}
+
+
+/* =========================================================
+   15. VIDEO
+========================================================= */
+
+.lesson-video {
+    margin-top: 35px;
+
+    padding: 27px;
+
+    border:
+        2px solid var(--blue);
+
+    border-radius: 24px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow);
+}
+
+.video-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 21px;
+}
+
+.video-play-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: var(--pink);
+
+    color: #FFFFFF;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 8px 18px
+        rgba(255, 174, 188, .3);
+}
+
+.video-label {
+    display: inline-block;
+
+    color: #438A8F;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.video-title h3 {
+    margin:
+        2px 0 2px;
+
+    font-size: 22px;
+}
+
+.video-title p {
+    margin: 0;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+
+    border-radius: 19px;
+
+    background: #111;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+.video-question {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-top: 17px;
+
+    padding: 15px 17px;
+
+    border-radius: 14px;
+
+    background: var(--yellow-soft);
+}
+
+.video-question > span {
+    font-size: 24px;
+}
+
+.video-question strong {
+    color: #70592E;
+}
+
+.video-question p {
+    margin:
+        2px 0 0;
+
+    color: #746548;
+}
+
+
+/* =========================================================
+   16. MINI QUIZ INSIDE LESSON
+========================================================= */
+
+.mini-quiz {
+    margin-top: 34px;
+
+    padding: 25px;
+
+    border:
+        2px dashed var(--blue);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #FFFFFF,
+            #FBFFFF
+        );
+}
+
+.mini-quiz-head {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 17px;
+}
+
+.mini-quiz-head > span {
+    font-size: 31px;
+}
+
+.mini-quiz h3 {
+    margin: 0;
+
+    font-size: 19px;
+}
+
+.mini-quiz-head p {
+    margin:
+        3px 0 0;
+
+    color: var(--muted);
+}
+
+.mini-quiz > button {
+    width: 100%;
+
+    display: block;
+
+    margin-top: 10px;
+
+    padding:
+        14px 16px;
+
+    border:
+        1.5px solid var(--border);
+
+    border-radius: 14px;
+
+    background: #FFFFFF;
+
+    color: #475467;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    transition: var(--transition);
+}
+
+.mini-quiz > button:hover:not(:disabled) {
+    border-color: var(--blue);
+
+    background: var(--blue-soft);
+
+    transform:
+        translateX(3px);
+}
+
+.mini-quiz > button:disabled {
+    cursor: default;
+
+    opacity: 1;
+}
+
+.mini-quiz > button.correct-answer {
+    border:
+        2px solid #7BD99D;
+
+    background: var(--mint-soft);
+
+    color: #286641;
+}
+
+.mini-quiz > button.wrong-answer {
+    border:
+        2px solid var(--pink);
+
+    background: var(--pink-soft);
+
+    color: #924355;
+}
+
+.lesson-feedback {
+    display: none;
+}
+
+.lesson-feedback.correct-feedback,
+.lesson-feedback.wrong-feedback {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    margin-top: 14px;
+
+    padding:
+        14px 17px;
+
+    border-radius: 13px;
+}
+
+.correct-feedback {
+    background: var(--mint-soft);
+
+    color: #286641;
+}
+
+.wrong-feedback {
+    background: var(--pink-soft);
+
+    color: #8C4050;
+}
+
+
+/* =========================================================
+   17. LESSON SUMMARY / COMPLETE
+========================================================= */
+
+.lesson-summary {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-top: 34px;
+
+    padding: 27px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-soft),
+            var(--mint-soft)
+        );
+}
+
+.summary-icon {
+    font-size: 41px;
+}
+
+.summary-label {
+    color: #41868B;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.lesson-summary h3 {
+    margin:
+        2px 0 6px;
+
+    font-size: 21px;
+}
+
+.lesson-summary p {
+    margin: 0;
+
+    color: #5C6C74;
+}
+
+.lesson-complete {
+    margin-top: 34px;
+
+    padding: 32px;
+
+    border-radius: 23px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue-soft),
+            var(--mint-soft),
+            var(--yellow-soft)
+        );
+
+    text-align: center;
+}
+
+.lesson-complete > span {
+    font-size: 46px;
+}
+
+.lesson-complete h3 {
+    margin:
+        7px 0 4px;
+
+    font-size: 25px;
+}
+
+.lesson-complete p {
+    max-width: 600px;
+
+    margin:
+        0 auto 20px;
+
+    color: var(--muted);
+}
+
+.lesson-next {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+
+/* =========================================================
+   18. ACTIVITY PAGE
+========================================================= */
+
+.activity-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.activity-card {
+    padding: 27px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 23px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+}
+
+.activity-card:hover {
+    transform:
+        translateY(-4px);
+
+    box-shadow: var(--shadow-hover);
+}
+
+.activity-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    border-radius: 19px;
+
+    background: var(--blue-soft);
+
+    font-size: 31px;
+}
+
+.activity-card:nth-child(2n) .activity-icon {
+    background: var(--pink-soft);
+}
+
+.activity-card h3 {
+    margin:
+        0 0 7px;
+
+    font-size: 21px;
+}
+
+.activity-card p {
+    margin:
+        0 0 18px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   19. RESULT PAGE
+========================================================= */
+
+.result-container {
+    width: min(850px, calc(100% - 40px));
+
+    margin: auto;
+
+    padding:
+        55px 0 85px;
+}
+
+.result-card {
+    padding:
+        clamp(28px, 5vw, 45px);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 30px;
+
+    background: #FFFFFF;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+}
+
+.result-icon {
+    width: 85px;
+    height: 85px;
+
+    margin:
+        0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--yellow),
+            var(--mint)
+        );
+
+    font-size: 42px;
+}
+
+.result-card h1 {
+    margin:
+        0 0 8px;
+
+    font-size:
+        clamp(30px, 5vw, 42px);
+}
+
+.result-card > p {
+    color: var(--muted);
+}
+
+.score-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin:
+        30px 0;
+}
+
+.score-box {
+    padding:
+        24px 15px;
+
+    border-radius: 20px;
+}
+
+.score-box:nth-child(1) {
+    background: var(--yellow-soft);
+}
+
+.score-box:nth-child(2) {
+    background: var(--blue-soft);
+}
+
+.score-box:nth-child(3) {
+    background: var(--mint-soft);
+}
+
+.score-box span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.score-box strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--text-dark);
+
+    font-size: 34px;
+}
+
+.result-message {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: #F8FAFB;
+
+    color: #52616C;
+}
+
+
+/* =========================================================
+   20. ALERT / INFORMATION BOXES
+========================================================= */
+
+.info-box,
+.warning-box,
+.success-box {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    margin:
+        20px 0;
+
+    border-radius: 17px;
+}
+
+.info-box {
+    background: var(--blue-soft);
+
+    color: #39676B;
+}
+
+.warning-box {
+    background: var(--yellow-soft);
+
+    color: #725D39;
+}
+
+.success-box {
+    background: var(--mint-soft);
+
+    color: #37634A;
+}
+
+
+/* =========================================================
+   21. LOADING / DISABLED
+========================================================= */
+
+button:disabled,
+.btn:disabled {
+    cursor: not-allowed;
+
+    opacity: .65;
+}
+
+.loading {
+    pointer-events: none;
+
+    opacity: .65;
+}
+
+
+/* =========================================================
+   22. FOOTER
+========================================================= */
+
+.site-footer {
+    padding:
+        24px 20px;
+
+    border-top:
+        1px solid var(--border);
+
+    background: #FFFFFF;
+
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+
+    color: #8A949E;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   23. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F7F8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C7E9E7;
+
+    border-radius: 999px;
+
+    border:
+        2px solid #F5F7F8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A0E7E5;
+}
+
+
+/* =========================================================
+   24. SELECTION
+========================================================= */
+
+::selection {
+    background: var(--blue);
+
+    color: #254B50;
+}
+
+
+/* =========================================================
+   25. TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-wrap {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding:
+            13px 0;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 4px;
+    }
+
+    .main-nav a {
+        white-space: nowrap;
+    }
+
+    .lesson-sidebar {
+        top: 145px;
+    }
+
+}
+
+
+/* =========================================================
+   26. TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 380px;
+    }
+
+
+    .objective-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .lesson-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .lesson-sidebar {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 7px;
+    }
+
+    .sidebar-title {
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   27. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width:
+            min(100% - 28px, 1180px);
+    }
+
+
+    /* HEADER */
+
+    .nav-wrap {
+        width:
+            min(100% - 24px, 1240px);
+    }
+
+    .brand span {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding:
+            45px 0 65px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+
+    /* FORM */
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* GUIDE */
+
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* QUIZ */
+
+    .quiz-container,
+    .result-container {
+        width:
+            min(100% - 28px, 850px);
+    }
+
+    .question-card {
+        padding: 22px 17px;
+    }
+
+    .quiz-navigation {
+        flex-direction: column;
+    }
+
+    .quiz-navigation .btn {
+        width: 100%;
+    }
+
+
+    /* LESSON */
+
+    .lesson-intro h1 br {
+        display: none;
+    }
+
+    .lesson-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-page {
+        padding:
+            23px 17px;
+    }
+
+    .lesson-topic-detail {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .law-grid,
+    .safe-list,
+    .password-columns,
+    .malware-grid,
+    .check-grid,
+    .protect-list {
+        grid-template-columns: 1fr;
+    }
+
+    .password-section {
+        padding: 19px;
+    }
+
+    .lesson-video {
+        padding: 18px;
+    }
+
+    .video-title {
+        align-items: flex-start;
+    }
+
+    .video-play-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 14px;
+    }
+
+    .lesson-summary {
+        flex-direction: column;
+    }
+
+    .lesson-next {
+        flex-direction: column;
+    }
+
+    .lesson-next .btn {
+        width: 100%;
+    }
+
+
+    /* ACTIVITIES */
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* RESULT */
+
+    .score-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   28. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .container {
+        width:
+            calc(100% - 20px);
+    }
+
+    .main-nav a {
+        padding:
+            8px 9px;
+
+        font-size: 13px;
+    }
+
+    .hero-text h1 {
+        font-size: 33px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .lesson-intro h1 {
+        font-size: 30px;
+    }
+
+    .lesson-heading h2 {
+        font-size: 25px;
+    }
+
+    .form-card {
+        padding:
+            24px 17px;
+    }
+
+    .mini-quiz {
+        padding: 19px 15px;
+    }
+
+    .lesson-complete {
+        padding:
+            27px 17px;
+    }
+
+}
+
+
+/* =========================================================
+   29. PRINT
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .site-footer,
+    .lesson-sidebar,
+    .lesson-next,
+    .quiz-navigation,
+    .btn {
+        display: none !important;
+    }
+
+    body {
+        background: #FFFFFF;
+    }
+
+    .container,
+    .quiz-container,
+    .result-container {
+        width: 100%;
+    }
+
+    .lesson-layout {
+        display: block;
+    }
+
+    .lesson-page {
+        display: block;
+
+        margin-bottom: 20px;
+
+        box-shadow: none;
+
+        page-break-inside: avoid;
+    }
+
+}
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(40, 95, 145, 0.38),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #071A34 0%,
+            #0D274A 52%,
+            #101E3B 100%
+        );
+}
+
+#particleCanvas {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.hero-glow {
+    z-index: 2;
+}
+
+.home-hero-inner {
+    position: relative;
+    z-index: 5;
+}
+
+.hero-stats {
+    position: relative;
+    z-index: 5;
+}
+/* =========================================================
+   SAFE TECH — FINAL UI PATCH
+   ใช้ต่อท้าย style.css เดิม
+========================================================= */
+
+
+/* =========================================================
+   1. HEADER COMPATIBILITY
+   รองรับทั้ง HTML รุ่นเดิมและหน้า Lesson
+========================================================= */
+
+.header,
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom:
+        1px solid #E5EFEF;
+
+    backdrop-filter:
+        blur(14px);
+}
+
+
+.header-inner,
+.nav-wrap {
+
+    width:
+        min(1380px, calc(100% - 40px));
+
+    min-height: 80px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.logo,
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-right: auto;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+.logo-icon,
+.brand-icon {
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #A0E7E5,
+            #B4F8C8
+        );
+
+    font-size: 24px;
+}
+
+
+.logo > div:last-child,
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.logo strong,
+.brand strong {
+
+    color: #263D59;
+
+    font-size: 18px;
+
+    line-height: 1.2;
+}
+
+
+.logo small,
+.brand span {
+
+    margin-top: 3px;
+
+    color: #98A2B3;
+
+    font-size: 11px;
+}
+
+
+.navbar,
+.main-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+
+.navbar a,
+.main-nav a {
+
+    padding:
+        10px 12px;
+
+    border-radius: 10px;
+
+    color: #59687A;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition:
+        0.2s ease;
+}
+
+
+.navbar a:hover,
+.main-nav a:hover {
+
+    background: #EFFBFB;
+
+    color: #263D59;
+}
+
+
+.navbar a.active,
+.main-nav a.active {
+
+    background: #A0E7E5;
+
+    color: #24515A;
+}
+
+
+
+/* =========================================================
+   2. BUTTON COMPATIBILITY
+========================================================= */
+
+.primary-btn,
+.btn-primary {
+
+    min-height: 46px;
+
+    padding:
+        11px 21px;
+
+    border:
+        1px solid #263D59;
+
+    border-radius: 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #263D59;
+
+    color: #FFFFFF;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.primary-btn:hover,
+.btn-primary:hover {
+
+    background: #355474;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.secondary-btn,
+.btn-secondary {
+
+    min-height: 46px;
+
+    padding:
+        11px 21px;
+
+    border:
+        1px solid #D8E2E8;
+
+    border-radius: 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    background: #FFFFFF;
+
+    color: #344054;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.secondary-btn:hover,
+.btn-secondary:hover {
+
+    background: #F1FCFC;
+
+    border-color: #A0E7E5;
+
+    transform:
+        translateY(-2px);
+}
+
+
+
+/* =========================================================
+   3. HOME HERO
+========================================================= */
+
+.home-hero {
+
+    position: relative;
+
+    min-height: 690px;
+
+    overflow: hidden;
+
+    padding-top: 85px;
+
+    background:
+        radial-gradient(
+            circle at 76% 45%,
+            rgba(75, 130, 175, 0.28),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #071E38 0%,
+            #0D2B4C 52%,
+            #14395D 100%
+        );
+}
+
+
+
+/* PARTICLE */
+
+#particleCanvas {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+}
+
+
+
+/* LIGHT EFFECT */
+
+.hero-glow {
+
+    position: absolute;
+
+    z-index: 2;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter:
+        blur(20px);
+}
+
+
+.hero-glow-one {
+
+    width: 480px;
+    height: 480px;
+
+    right: -180px;
+    top: -180px;
+
+    background:
+        rgba(160, 231, 229, 0.08);
+}
+
+
+.hero-glow-two {
+
+    width: 400px;
+    height: 400px;
+
+    left: -200px;
+    bottom: -180px;
+
+    background:
+        rgba(255, 174, 188, 0.06);
+}
+
+
+
+/* HERO GRID */
+
+.home-hero-inner {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(1380px, calc(100% - 70px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.95fr 1.05fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+
+/* LEFT */
+
+.home-hero-content {
+
+    position: relative;
+
+    z-index: 6;
+
+    padding-bottom: 90px;
+}
+
+
+.hero-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    color: #A0E7E5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+.hero-eyebrow > span {
+
+    width: 35px;
+
+    height: 2px;
+
+    background: #A0E7E5;
+}
+
+
+.home-hero-content h1 {
+
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size:
+        clamp(48px, 5.2vw, 75px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+
+.home-hero-content h1 span {
+
+    color: #A0E7E5;
+}
+
+
+.hero-description {
+
+    max-width: 650px;
+
+    margin:
+        27px 0;
+
+    color:
+        rgba(255, 255, 255, 0.67);
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+
+/* HERO BUTTONS */
+
+.hero-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+
+.hero-primary-btn,
+.hero-secondary-btn {
+
+    min-height: 54px;
+
+    padding:
+        0 24px;
+
+    border-radius: 12px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-weight: 700;
+
+    transition:
+        0.25s ease;
+}
+
+
+.hero-primary-btn {
+
+    background: #A0E7E5;
+
+    color: #173D50;
+
+    box-shadow:
+        0 10px 25px
+        rgba(160, 231, 229, 0.15);
+}
+
+
+.hero-primary-btn:hover {
+
+    background: #B4F8C8;
+
+    transform:
+        translateY(-3px);
+}
+
+
+.hero-secondary-btn {
+
+    color: #FFFFFF;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.17);
+}
+
+
+.hero-secondary-btn:hover {
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    transform:
+        translateY(-3px);
+}
+
+
+
+/* MINI INFO */
+
+.hero-mini-info {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+}
+
+
+.hero-mini-info b {
+
+    margin-right: 5px;
+
+    color: #B4F8C8;
+}
+
+
+
+/* =========================================================
+   4. HERO VISUAL
+========================================================= */
+
+.home-hero-visual {
+
+    position: relative;
+
+    min-height: 500px;
+}
+
+
+
+/* ORBIT */
+
+.digital-orbit {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(160, 231, 229, 0.14);
+
+    pointer-events: none;
+}
+
+
+.orbit-one {
+
+    width: 500px;
+    height: 500px;
+}
+
+
+.orbit-two {
+
+    width: 390px;
+    height: 390px;
+}
+
+
+.orbit-three {
+
+    width: 275px;
+    height: 275px;
+
+    border-style: dashed;
+}
+
+
+
+/* SHIELD */
+
+.shield-scene {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 300px;
+    height: 300px;
+
+    display: grid;
+
+    place-items: center;
+}
+
+
+.shield-back-circle {
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(160, 231, 229, 0.17),
+            transparent 68%
+        );
+}
+
+
+.main-shield {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 175px;
+    height: 175px;
+
+    border-radius: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    backdrop-filter:
+        blur(12px);
+
+    font-size: 88px;
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+
+/* STATUS */
+
+.shield-status {
+
+    position: absolute;
+
+    z-index: 5;
+
+    right: -25px;
+
+    bottom: 20px;
+
+    padding:
+        10px 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(8, 34, 63, 0.85);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.11);
+}
+
+
+.status-dot {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #B4F8C8;
+
+    box-shadow:
+        0 0 12px #B4F8C8;
+}
+
+
+.shield-status div {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.shield-status small {
+
+    color: #8194A8;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+.shield-status strong {
+
+    color: #B4F8C8;
+
+    font-size: 11px;
+}
+
+
+
+/* FLOATING CARDS */
+
+.floating-card {
+
+    position: absolute;
+
+    z-index: 5;
+
+    min-width: 190px;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(9, 37, 68, 0.82);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    backdrop-filter:
+        blur(14px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.18);
+
+    animation:
+        safeFloat 4.5s
+        ease-in-out infinite;
+}
+
+
+.floating-icon {
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 11px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 20px;
+}
+
+
+.floating-icon.pink {
+
+    background:
+        rgba(255, 174, 188, 0.17);
+}
+
+
+.floating-icon.yellow {
+
+    background:
+        rgba(251, 231, 198, 0.16);
+}
+
+
+.floating-icon.mint {
+
+    background:
+        rgba(180, 248, 200, 0.15);
+}
+
+
+.floating-card > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.floating-card small {
+
+    color: #7E92A8;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+.floating-card strong {
+
+    color: #FFFFFF;
+
+    font-size: 11px;
+}
+
+
+.float-password {
+
+    left: 0;
+
+    top: 60px;
+}
+
+
+.float-internet {
+
+    right: 0;
+
+    top: 180px;
+
+    animation-delay:
+        -1.2s;
+}
+
+
+.float-malware {
+
+    left: 25px;
+
+    bottom: 55px;
+
+    animation-delay:
+        -2.1s;
+}
+
+
+@keyframes safeFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+    }
+
+}
+
+
+
+/* DECORATIVE DOT */
+
+.network-dot {
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #A0E7E5;
+
+    box-shadow:
+        0 0 12px #A0E7E5;
+}
+
+
+.dot-1 {
+
+    right: 110px;
+
+    top: 55px;
+}
+
+
+.dot-2 {
+
+    left: 70px;
+
+    top: 250px;
+}
+
+
+.dot-3 {
+
+    right: 100px;
+
+    bottom: 75px;
+}
+
+
+.dot-4 {
+
+    left: 255px;
+
+    top: 120px;
+}
+
+
+.dot-5 {
+
+    right: 25px;
+
+    bottom: 145px;
+}
+
+
+
+/* =========================================================
+   5. HERO STAT
+========================================================= */
+
+.hero-stats {
+
+    position: relative;
+
+    z-index: 5;
+
+    width:
+        min(1380px, calc(100% - 70px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+
+    border-bottom: none;
+
+    border-radius:
+        16px 16px 0 0;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.stat-card {
+
+    min-height: 105px;
+
+    padding:
+        20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    border-right:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+
+.stat-card:last-child {
+
+    border-right: 0;
+}
+
+
+.stat-icon {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(160, 231, 229, 0.1);
+
+    font-size: 22px;
+}
+
+
+.stat-card > div:last-child {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.stat-card strong {
+
+    color: #FFFFFF;
+
+    font-size: 20px;
+}
+
+
+.stat-card span {
+
+    color: #8FA1B5;
+
+    font-size: 11px;
+}
+
+
+
+/* =========================================================
+   6. LEARNING PATH
+========================================================= */
+
+.learning-path-section {
+
+    padding:
+        80px 0 95px;
+
+    background: #F8FAFC;
+}
+
+
+.section-container {
+
+    width:
+        min(1280px, calc(100% - 50px));
+
+    margin: auto;
+}
+
+
+.section-heading {
+
+    max-width: 720px;
+
+    margin:
+        0 auto 40px;
+
+    text-align: center;
+}
+
+
+.section-tag {
+
+    color: #43898E;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.section-heading h2 {
+
+    margin:
+        8px 0;
+
+    color: #263D59;
+
+    font-size:
+        clamp(30px, 4vw, 42px);
+}
+
+
+.section-heading p {
+
+    color: #7B8796;
+}
+
+
+.learning-path-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+
+.path-card {
+
+    position: relative;
+
+    min-height: 270px;
+
+    padding:
+        23px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+        1px solid #E4E9ED;
+
+    border-radius: 18px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 10px 25px
+        rgba(38, 61, 89, 0.06);
+
+    transition:
+        0.25s ease;
+}
+
+
+.path-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color: #A0E7E5;
+
+    box-shadow:
+        0 18px 35px
+        rgba(38, 61, 89, 0.1);
+}
+
+
+.path-card.featured {
+
+    border-color:
+        transparent;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0C2949,
+            #17466E
+        );
+}
+
+
+.path-number {
+
+    position: absolute;
+
+    right: 16px;
+
+    top: 12px;
+
+    color: #E7EDF2;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+.featured .path-number {
+
+    color:
+        rgba(255, 255, 255, 0.1);
+}
+
+
+.path-icon {
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 17px;
+
+    border-radius: 13px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #EEFCFC;
+
+    font-size: 24px;
+}
+
+
+.path-card h3 {
+
+    margin:
+        0 0 7px;
+
+    color: #263D59;
+}
+
+
+.path-card p {
+
+    margin: 0;
+
+    color: #7B8796;
+
+    font-size: 14px;
+}
+
+
+.path-link {
+
+    margin-top: auto;
+
+    padding-top: 18px;
+
+    color: #43898E;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.featured h3 {
+
+    color: #FFFFFF;
+}
+
+
+.featured p {
+
+    color: #AABBCB;
+}
+
+
+.featured .path-link {
+
+    color: #A0E7E5;
+}
+
+
+
+/* =========================================================
+   7. FIX STUDENT PAGE
+========================================================= */
+
+.form-icon {
+
+    width: 70px;
+    height: 70px;
+
+    margin:
+        0 auto 15px;
+
+    border-radius: 20px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #EEFCFC;
+
+    font-size: 32px;
+}
+
+
+.form-card > .primary-btn {
+
+    width: 100%;
+
+    margin-top: 5px;
+}
+
+
+
+/* =========================================================
+   8. GUIDE / OBJECTIVE
+========================================================= */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+.info-card {
+
+    min-height: 205px;
+
+    padding: 27px;
+
+    transition:
+        0.25s ease;
+}
+
+
+.info-card:hover {
+
+    transform:
+        translateY(-4px);
+}
+
+
+.info-card.pink {
+
+    background: #FFF1F4;
+}
+
+
+.info-card.blue {
+
+    background: #EEFCFC;
+}
+
+
+.info-card.mint {
+
+    background: #F0FFF5;
+}
+
+
+.info-card.yellow {
+
+    background: #FFF9EF;
+}
+
+
+.info-card .icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 14px;
+
+    border-radius: 17px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 28px;
+}
+
+
+
+/* =========================================================
+   9. PRETEST / POSTTEST
+========================================================= */
+
+.quiz-box {
+
+    width:
+        min(1000px, calc(100% - 40px));
+
+    padding-bottom: 80px;
+}
+
+
+.quiz-progress {
+
+    margin:
+        15px 0 27px;
+}
+
+
+.progress-track {
+
+    height: 10px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #E9EFF2;
+}
+
+
+.progress-fill {
+
+    height: 100%;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #A0E7E5,
+            #B4F8C8
+        );
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.question-card {
+
+    padding:
+        38px 40px;
+
+    border:
+        1px solid #E4E9ED;
+
+    border-radius: 25px;
+
+    background: #FFFFFF;
+
+    box-shadow:
+        0 15px 40px
+        rgba(38, 61, 89, 0.08);
+}
+
+
+.question-number {
+
+    display: inline-flex;
+
+    padding:
+        8px 16px;
+
+    border-radius: 999px;
+
+    background: #FBE7C6;
+
+    color: #765D33;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.question-card h2 {
+
+    margin:
+        20px 0 25px;
+
+    color: #263D59;
+
+    font-size:
+        clamp(22px, 3vw, 30px);
+}
+
+
+.answers {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 13px;
+}
+
+
+.answer {
+
+    width: 100%;
+
+    min-height: 62px;
+
+    padding:
+        14px 17px;
+
+    border:
+        1.5px solid #DCE5EB;
+
+    border-radius: 15px;
+
+    background: #FFFFFF;
+
+    color: #435267;
+
+    text-align: left;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        0.2s ease;
+}
+
+
+.answer:hover {
+
+    border-color: #A0E7E5;
+
+    background: #F0FCFC;
+
+    transform:
+        translateY(-2px);
+}
+
+
+.answer.selected {
+
+    border-color: #69CFCE;
+
+    background: #DFF9F8;
+
+    color: #24515A;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(160, 231, 229, 0.2);
+}
+
+
+.quiz-actions {
+
+    margin-top: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+
+/* =========================================================
+   10. ACTIVITY
+========================================================= */
+
+.scenario {
+
+    max-width: 920px;
+
+    margin:
+        0 auto 20px;
+
+    padding:
+        28px 30px;
+}
+
+
+.scenario-options {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 18px;
+}
+
+
+.scenario-options button {
+
+    width: 100%;
+}
+
+
+.feedback {
+
+    display: none;
+
+    margin-top: 16px;
+
+    padding:
+        13px 16px;
+
+    border-radius: 13px;
+
+    font-weight: 600;
+}
+
+
+.feedback.show {
+
+    display: block;
+}
+
+
+
+/* =========================================================
+   11. RESULT
+========================================================= */
+
+.result-card {
+
+    max-width: 850px;
+
+    margin:
+        65px auto 90px;
+
+    padding: 42px;
+
+    text-align: center;
+}
+
+
+.score-comparison {
+
+    max-width: 650px;
+
+    margin:
+        35px auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.score-circle {
+
+    width: 165px;
+    height: 165px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.score-circle.pre {
+
+    background: #FFF9EF;
+
+    border:
+        7px solid #FBE7C6;
+}
+
+
+.score-circle.post {
+
+    background: #F0FFF5;
+
+    border:
+        7px solid #B4F8C8;
+}
+
+
+.score-circle strong {
+
+    color: #263D59;
+
+    font-size: 34px;
+}
+
+
+.score-circle span {
+
+    color: #7B8796;
+
+    font-size: 13px;
+}
+
+
+.difference {
+
+    color: #4B8990;
+
+    font-size: 30px;
+}
+
+
+
+/* =========================================================
+   12. RESPONSIVE
+========================================================= */
+
+@media (max-width: 1180px) {
+
+    .header-inner,
+    .nav-wrap {
+
+        flex-wrap: wrap;
+
+        padding:
+            12px 0;
+
+        gap: 10px;
+    }
+
+
+    .navbar,
+    .main-nav {
+
+        order: 3;
+
+        width: 100%;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+    }
+
+
+    .learning-path-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+
+    .home-hero-inner {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+
+    .hero-eyebrow,
+    .hero-actions,
+    .hero-mini-info {
+
+        justify-content: center;
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .home-hero-content {
+
+        padding-bottom: 10px;
+    }
+
+
+    .hero-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .answers {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+    .home-hero-inner,
+    .hero-stats {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .home-hero-content h1 {
+
+        font-size: 41px;
+    }
+
+
+    .home-hero-visual {
+
+        min-height: 420px;
+
+        transform:
+            scale(0.86);
+    }
+
+
+    .hero-stats {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .learning-path-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .question-card {
+
+        padding:
+            25px 18px;
+    }
+
+
+    .scenario-options {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .quiz-actions {
+
+        flex-direction: column;
+    }
+
+
+    .quiz-actions button {
+
+        width: 100%;
+    }
+
+
+    .score-comparison {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .difference {
+
+        transform:
+            rotate(90deg);
+    }
+
+
+    .result-card {
+
+        padding:
+            28px 18px;
+    }
+
+}
+/* =========================================================
+   SAFE TECH HOME HERO
+   รูปแบบเดิม + ORIGINAL COLOR PALETTE
+========================================================= */
+
+.home-hero {
+
+    position: relative;
+
+    min-height: 690px;
+
+    overflow: hidden;
+
+    padding-top: 85px;
+
+    /* เปลี่ยนจาก Navy เป็นพื้นหลังสว่างตามสีเดิม */
+    background:
+        radial-gradient(
+            circle at 78% 42%,
+            rgba(160, 231, 229, 0.42),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 12% 20%,
+            rgba(255, 174, 188, 0.20),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 72% 85%,
+            rgba(180, 248, 200, 0.24),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #FFFDF8 0%,
+            #F5FFFF 52%,
+            #F1FFFA 100%
+        );
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.hero-eyebrow {
+
+    color: #4A9698;
+}
+
+
+.hero-eyebrow > span {
+
+    background: #A0E7E5;
+}
+
+
+.home-hero-content h1 {
+
+    color: #263D59;
+}
+
+
+/* คำว่า "เทคโนโลยี" */
+
+.home-hero-content h1 span {
+
+    color: #58BFC0;
+}
+
+
+.hero-description {
+
+    color: #66778A;
+}
+
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-primary-btn {
+
+    background: #A0E7E5;
+
+    color: #263D59;
+
+    box-shadow:
+        0 10px 25px
+        rgba(160, 231, 229, 0.35);
+}
+
+
+.hero-primary-btn:hover {
+
+    background: #B4F8C8;
+}
+
+
+.hero-secondary-btn {
+
+    color: #263D59;
+
+    background: #FFFFFF;
+
+    border:
+        1.5px solid #D7E8E8;
+
+    box-shadow:
+        0 7px 20px
+        rgba(38, 61, 89, 0.05);
+}
+
+
+.hero-secondary-btn:hover {
+
+    background: #FFF7F8;
+
+    border-color: #FFAEBC;
+}
+
+
+
+/* =========================================================
+   MINI INFO
+========================================================= */
+
+.hero-mini-info {
+
+    color: #718096;
+}
+
+
+.hero-mini-info b {
+
+    color: #58B97A;
+}
+
+
+
+/* =========================================================
+   PARTICLE / NETWORK
+========================================================= */
+
+#particleCanvas {
+
+    opacity: 0.72;
+}
+
+
+/* จุดตกแต่ง */
+
+.network-dot {
+
+    background: #68CACA;
+
+    box-shadow:
+        0 0 12px
+        rgba(104, 202, 202, 0.7);
+}
+
+
+
+/* =========================================================
+   ORBIT
+========================================================= */
+
+.digital-orbit {
+
+    border-color:
+        rgba(88, 191, 192, 0.22);
+}
+
+
+.orbit-three {
+
+    border-color:
+        rgba(255, 174, 188, 0.30);
+}
+
+
+
+/* =========================================================
+   SHIELD
+========================================================= */
+
+.shield-back-circle {
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(160, 231, 229, 0.48),
+            rgba(180, 248, 200, 0.18) 48%,
+            transparent 70%
+        );
+}
+
+
+.main-shield {
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border:
+        1px solid
+        rgba(160, 231, 229, 0.7);
+
+    box-shadow:
+        0 22px 55px
+        rgba(83, 150, 155, 0.15);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+
+/* =========================================================
+   FLOATING INFORMATION CARDS
+========================================================= */
+
+.floating-card {
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border:
+        1px solid
+        rgba(160, 231, 229, 0.48);
+
+    box-shadow:
+        0 14px 35px
+        rgba(38, 61, 89, 0.09);
+
+    backdrop-filter:
+        blur(14px);
+}
+
+
+.floating-card small {
+
+    color: #8A98A8;
+}
+
+
+.floating-card strong {
+
+    color: #263D59;
+}
+
+
+
+/* PASSWORD */
+
+.floating-icon.pink {
+
+    background:
+        rgba(255, 174, 188, 0.35);
+}
+
+
+/* INTERNET */
+
+.floating-icon.yellow {
+
+    background:
+        rgba(251, 231, 198, 0.65);
+}
+
+
+/* MALWARE */
+
+.floating-icon.mint {
+
+    background:
+        rgba(180, 248, 200, 0.55);
+}
+
+
+
+/* =========================================================
+   SECURITY STATUS
+========================================================= */
+
+.shield-status {
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border:
+        1px solid
+        rgba(180, 248, 200, 0.8);
+
+    box-shadow:
+        0 12px 30px
+        rgba(38, 61, 89, 0.09);
+}
+
+
+.shield-status small {
+
+    color: #8492A3;
+}
+
+
+.shield-status strong {
+
+    color: #41965D;
+}
+
+
+.status-dot {
+
+    background: #B4F8C8;
+
+    box-shadow:
+        0 0 10px
+        rgba(100, 200, 130, 0.7);
+}
+
+
+
+/* =========================================================
+   HERO GLOW
+========================================================= */
+
+.hero-glow-one {
+
+    background:
+        rgba(160, 231, 229, 0.32);
+}
+
+
+.hero-glow-two {
+
+    background:
+        rgba(255, 174, 188, 0.18);
+}
+
+
+
+/* =========================================================
+   STAT BAR
+========================================================= */
+
+.hero-stats {
+
+    border:
+        1px solid #E2EEEE;
+
+    border-bottom: none;
+
+    background:
+        rgba(255, 255, 255, 0.80);
+
+    box-shadow:
+        0 -8px 35px
+        rgba(38, 61, 89, 0.05);
+
+    backdrop-filter:
+        blur(15px);
+}
+
+
+.stat-card {
+
+    border-right:
+        1px solid #E4EEEE;
+}
+
+
+.stat-card:last-child {
+
+    border-right: none;
+}
+
+
+.stat-icon {
+
+    background: #EEFCFC;
+}
+
+
+.stat-card:nth-child(1) .stat-icon {
+
+    background: #EEFCFC;
+}
+
+
+.stat-card:nth-child(2) .stat-icon {
+
+    background: #FFF1F4;
+}
+
+
+.stat-card:nth-child(3) .stat-icon {
+
+    background: #FFF8EA;
+}
+
+
+.stat-card:nth-child(4) .stat-icon {
+
+    background: #F0FFF5;
+}
+
+
+.stat-card strong {
+
+    color: #263D59;
+}
+
+
+.stat-card span {
+
+    color: #7B8796;
+}
+/* =====================================================
+   LESSON VIDEO — SAFE TECH
+===================================================== */
+
+.lesson-video-card {
+    margin: 32px 0;
+    padding: 28px 30px;
+
+    background: #ffffff;
+    border: 1.5px solid #dce9eb;
+    border-radius: 24px;
+
+    box-shadow: 0 10px 30px rgba(38, 61, 89, 0.06);
+}
+
+
+/* หัวข้อ */
+
+.video-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.video-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 27px;
+
+    background: #FBE7C6;
+    border-radius: 16px;
+}
+
+.video-heading h3 {
+    margin: 2px 0 6px;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #263D59;
+}
+
+.video-heading p {
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #66778A;
+}
+
+
+/* ===============================
+   ระหว่างดูลองสังเกต
+================================ */
+
+.watch-guide {
+    margin-top: 22px;
+    padding: 20px 24px;
+
+    background: rgba(160, 231, 229, 0.16);
+
+    border-left: 5px solid #A0E7E5;
+    border-radius: 15px;
+}
+
+.watch-guide-title {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #263D59;
+}
+
+.watch-guide ul {
+    margin: 0;
+    padding-left: 24px;
+
+    color: #53687C;
+}
+
+.watch-guide li {
+    margin: 7px 0;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ===============================
+   VIDEO
+================================ */
+
+.lesson-video {
+    position: relative;
+
+    width: 100%;
+    margin-top: 24px;
+
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+
+    background: #eef5f5;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 24px rgba(38, 61, 89, 0.10);
+}
+
+.lesson-video iframe {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* ===============================
+   กล่องสรุป
+================================ */
+
+.video-summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-top: 24px;
+    padding: 20px 22px;
+
+    background: #FFF9EC;
+
+    border: 1px solid #FBE7C6;
+    border-radius: 16px;
+}
+
+.summary-icon {
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.video-summary h4 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    color: #263D59;
+}
+
+.video-summary p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #53687C;
+}
+
+.video-summary strong {
+    color: #263D59;
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .lesson-video-card {
+        padding: 20px 18px;
+        border-radius: 18px;
+    }
+
+    .video-heading {
+        gap: 12px;
+    }
+
+    .video-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+
+    .video-heading h3 {
+        font-size: 19px;
+    }
+
+    .video-heading p,
+    .watch-guide li,
+    .video-summary p {
+        font-size: 15px;
+    }
+
+}
+/* =====================================================
+   EXTRA LESSON CONTENT
+===================================================== */
+
+.knowledge-section {
+    margin: 30px 0;
+}
+
+.knowledge-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.knowledge-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #FBE7C6;
+    font-size: 25px;
+}
+
+.knowledge-label {
+    display: block;
+    margin-bottom: 3px;
+    color: #4A9EA2;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.knowledge-heading h3 {
+    margin: 0;
+    color: #263D59;
+    font-size: 23px;
+}
+
+.knowledge-intro {
+    margin: 0 0 22px;
+    padding: 20px 22px;
+    background: #F7FCFC;
+    border-left: 5px solid #A0E7E5;
+    border-radius: 14px;
+    color: #53687C;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.knowledge-card {
+    padding: 21px;
+    background: #FFFFFF;
+    border: 1px solid #E1EAEC;
+    border-radius: 18px;
+}
+
+.knowledge-card:nth-child(4n + 1) {
+    background: rgba(160, 231, 229, 0.13);
+}
+
+.knowledge-card:nth-child(4n + 2) {
+    background: rgba(255, 174, 188, 0.12);
+}
+
+.knowledge-card:nth-child(4n + 3) {
+    background: rgba(180, 248, 200, 0.15);
+}
+
+.knowledge-card:nth-child(4n + 4) {
+    background: rgba(251, 231, 198, 0.20);
+}
+
+.knowledge-card-icon {
+    margin-bottom: 9px;
+    font-size: 27px;
+}
+
+.knowledge-card h4,
+.malware-card h4,
+.scenario-box h4,
+.remember-box h4,
+.info-box h4 {
+    margin: 0 0 7px;
+    color: #263D59;
+    font-size: 18px;
+}
+
+.knowledge-card p,
+.malware-card p,
+.scenario-box p,
+.remember-box p,
+.info-box p {
+    margin: 0;
+    color: #53687C;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.scenario-box {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+    padding: 20px 22px;
+    background: rgba(251, 231, 198, 0.35);
+    border: 1px solid #FBE7C6;
+    border-radius: 17px;
+}
+
+.scenario-icon {
+    flex-shrink: 0;
+    font-size: 26px;
+}
+
+.remember-box {
+    display: flex;
+    gap: 14px;
+    margin-top: 15px;
+    padding: 20px 22px;
+    background: rgba(180, 248, 200, 0.22);
+    border-left: 5px solid #B4F8C8;
+    border-radius: 15px;
+}
+
+.remember-box > span {
+    flex-shrink: 0;
+    font-size: 25px;
+}
+
+.info-box {
+    margin-top: 20px;
+    padding: 20px 22px;
+    background: rgba(160, 231, 229, 0.16);
+    border: 1px solid #A0E7E5;
+    border-radius: 17px;
+}
+
+/* MALWARE TYPES */
+
+.malware-types {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.malware-card {
+    padding: 20px 17px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #E1EAEC;
+    border-radius: 18px;
+}
+
+.malware-card > span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 29px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .knowledge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .malware-types {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+
+    .malware-types {
+        grid-template-columns: 1fr;
+    }
+
+    .knowledge-intro,
+    .knowledge-card,
+    .scenario-box,
+    .remember-box,
+    .info-box {
+        padding: 17px;
+    }
+}
+/* =====================================================
+   LESSON CHECK — ตรวจสอบความเข้าใจ
+===================================================== */
+
+.lesson-check {
+    margin-top: 38px;
+    padding: 28px 30px;
+
+    background: #ffffff;
+
+    border: 2px dashed #A0E7E5;
+    border-radius: 24px;
+}
+
+.check-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+.check-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 174, 188, 0.22);
+    border-radius: 15px;
+
+    font-size: 25px;
+}
+
+.check-heading h3 {
+    margin: 0 0 5px;
+
+    color: #263D59;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.check-heading p {
+    margin: 0;
+
+    color: #53687C;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ตัวเลือก */
+
+.check-options {
+    display: grid;
+    gap: 12px;
+}
+
+.check-answer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 16px 18px;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 16px;
+
+    color: #42566C;
+
+    text-align: left;
+
+    background: #ffffff;
+
+    border: 1.5px solid #DFE7EA;
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        border-color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.check-answer:hover {
+    transform: translateY(-2px);
+
+    border-color: #A0E7E5;
+
+    background: rgba(160, 231, 229, 0.08);
+
+    box-shadow: 0 7px 18px rgba(38, 61, 89, 0.07);
+}
+
+
+/* A B C */
+
+.choice-letter {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #F3F6F8;
+
+    border-radius: 10px;
+
+    color: #53687C;
+
+    font-weight: 700;
+}
+
+
+/* ตอบถูก */
+
+.check-answer.correct {
+    border-color: #83DFA5;
+
+    background: rgba(180, 248, 200, 0.30);
+
+    color: #263D59;
+}
+
+.check-answer.correct .choice-letter {
+    background: #B4F8C8;
+
+    color: #315B43;
+}
+
+
+/* ตอบผิด */
+
+.check-answer.wrong {
+    border-color: #FFAEBC;
+
+    background: rgba(255, 174, 188, 0.20);
+
+    color: #263D59;
+}
+
+.check-answer.wrong .choice-letter {
+    background: #FFAEBC;
+
+    color: #7A3946;
+}
+
+
+/* Feedback */
+
+.check-feedback {
+    display: none;
+
+    margin-top: 17px;
+    padding: 17px 19px;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.check-feedback.show {
+    display: block;
+}
+
+.check-feedback.success {
+    background: rgba(180, 248, 200, 0.28);
+
+    border-left: 5px solid #B4F8C8;
+
+    color: #315B43;
+}
+
+.check-feedback.error {
+    background: rgba(255, 174, 188, 0.20);
+
+    border-left: 5px solid #FFAEBC;
+
+    color: #75414A;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 700px) {
+
+    .lesson-check {
+        padding: 21px 18px;
+    }
+
+    .check-heading h3 {
+        font-size: 20px;
+    }
+
+    .check-heading p,
+    .check-answer,
+    .check-feedback {
+        font-size: 15px;
+    }
+}
+/* =====================================================
+   INFOGRAPHIC SUMMARY
+===================================================== */
+
+.infographic-section {
+    margin: 38px 0;
+    padding: 24px;
+
+    background: #ffffff;
+    border: 1px solid #e3ecef;
+    border-radius: 24px;
+
+    box-shadow: 0 10px 30px rgba(38, 61, 89, 0.07);
+}
+
+.infographic-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.infographic-badge {
+    display: inline-block;
+
+    margin-bottom: 8px;
+    padding: 6px 14px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.infographic-title h3 {
+    margin: 3px 0 5px;
+
+    color: #263D59;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.infographic-title p {
+    margin: 0;
+
+    color: #66778A;
+
+    font-size: 16px;
+}
+
+
+/* กรอบภาพ */
+
+.infographic-frame {
+    width: 100%;
+    overflow: hidden;
+
+    background: #F8FCFC;
+
+    border: 1px solid #E1EAEC;
+    border-radius: 18px;
+}
+
+
+/* ภาพ Infographic */
+
+.infographic-frame img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 700px) {
+
+    .infographic-section {
+        margin: 28px 0;
+        padding: 15px;
+        border-radius: 18px;
+    }
+
+    .infographic-title h3 {
+        font-size: 20px;
+    }
+
+    .infographic-title p {
+        font-size: 14px;
+    }
+
+    .infographic-frame {
+        border-radius: 14px;
+    }
+}
+/* =====================================================
+   CREATOR PAGE
+===================================================== */
+
+.creator-page {
+    padding-top: 55px;
+    padding-bottom: 70px;
+}
+
+.creator-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.creator-label {
+    display: inline-block;
+
+    padding: 7px 15px;
+    margin-bottom: 10px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.creator-heading h1 {
+    margin: 5px 0 8px;
+
+    color: #263D59;
+
+    font-size: 38px;
+}
+
+.creator-heading p {
+    margin: 0;
+
+    color: #66778A;
+    font-size: 17px;
+}
+
+
+/* CARD */
+
+.creator-card {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+
+    gap: 40px;
+    align-items: center;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #E3ECEF;
+    border-radius: 28px;
+
+    box-shadow: 0 15px 40px rgba(38, 61, 89, 0.08);
+}
+
+
+/* PHOTO */
+
+.creator-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #A0E7E5,
+        #B4F8C8
+    );
+
+    border-radius: 24px;
+}
+
+.creator-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* INFORMATION */
+
+.creator-small {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #4A9EA2;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.creator-info h2 {
+    margin: 0 0 25px;
+
+    color: #263D59;
+
+    font-size: 28px;
+}
+
+.creator-detail {
+    display: grid;
+    gap: 12px;
+}
+
+.creator-detail > div {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    background: #F8FCFC;
+
+    border-radius: 16px;
+}
+
+.creator-detail span {
+    font-size: 24px;
+}
+
+.creator-detail p {
+    margin: 0;
+
+    color: #5F7184;
+
+    line-height: 1.6;
+}
+
+.creator-detail strong {
+    color: #263D59;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .creator-card {
+        grid-template-columns: 1fr;
+    }
+
+    .creator-photo {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .creator-info {
+        text-align: center;
+    }
+
+    .creator-detail {
+        text-align: left;
+    }
+
+}
+/* =====================================================
+   NAVBAR - รองรับเมนูเพิ่มเติม
+===================================================== */
+
+.nav-wrap {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 0 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 6px;
+    flex-wrap: nowrap;
+}
+
+.main-nav a {
+    white-space: nowrap;
+
+    padding: 11px 14px;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+/* =====================================================
+   RESULT ACTIONS / LOGOUT
+===================================================== */
+
+.result-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.logout-btn {
+    padding: 13px 24px;
+
+    background: #FFAEBC;
+    color: #263D59;
+
+    border: none;
+    border-radius: 14px;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 174, 188, 0.35);
+}
+/* =====================================================
+   SAFE TECH BACKGROUND
+===================================================== */
+
+body {
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.45)
+        ),
+        url("bg.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+/* =====================================================
+   STUDENT AVATAR
+===================================================== */
+
+/* รูปใหญ่ในกล่องไอคอน */
+
+.student-avatar-box {
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+.student-avatar {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+}
+
+
+/* รูปเล็กข้างชื่อผู้เรียน */
+
+.student-name-with-avatar {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.student-mini-avatar {
+    width: 30px;
+    height: 30px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background: #EAFBFA;
+}
+/* ===== ปรับขนาดรูปข้อมูลผู้เรียน ===== */
+
+.student-icon {
+    width: 100px !important;
+    height: 100px !important;
+
+    margin: 0 auto 20px !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #EAFBFA;
+    border-radius: 22px;
+}
+
+.student-icon img {
+    width: 100px !important;
+    height: 100px !important;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 18px;
+}
+/* =====================================================
+   FIX LEARNING PATH IMAGE SIZE
+===================================================== */
+
+.learning-path-grid .path-icon {
+    width: 66px !important;
+    height: 66px !important;
+    min-width: 66px !important;
+    min-height: 66px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 6px !important;
+
+    overflow: hidden !important;
+
+    background: #EAFBFA;
+    border-radius: 16px;
+}
+
+.learning-path-grid .path-icon img {
+    display: block !important;
+
+    width: 52px !important;
+    height: 52px !important;
+    max-width: 52px !important;
+    max-height: 52px !important;
+
+    object-fit: contain !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* =====================================================
+   LEARNING PATH - IMAGE ICON FIX
+===================================================== */
+
+.learning-path-grid .path-icon {
+    width: 66px !important;
+    height: 66px !important;
+
+    min-width: 66px !important;
+    min-height: 66px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 5px !important;
+
+    overflow: hidden !important;
+
+    background: #EAFBFA;
+
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+
+/* รูปภาพ */
+
+.learning-path-grid .path-icon img {
+    display: block !important;
+
+    width: 54px !important;
+    height: 54px !important;
+
+    max-width: 54px !important;
+    max-height: 54px !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* ป้องกันรูปภาพอื่นมาดันการ์ด */
+
+.learning-path-grid .path-card > img {
+    max-width: 100%;
+}
+
+
+/* การ์ดเด่น บทเรียน */
+
+.learning-path-grid .path-card.featured .path-icon {
+    background: #EAFBFA;
+}
+/* =====================================================
+   LEARNING PATH CARD - HOVER EFFECT
+===================================================== */
+
+/* ทุกการ์ดเริ่มต้นเหมือนกัน */
+.learning-path-grid .path-card,
+.learning-path-grid .path-card.featured {
+    background: #ffffff !important;
+    border: 1px solid #DFE8EC !important;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* หัวข้อเริ่มต้น */
+.learning-path-grid .path-card h3,
+.learning-path-grid .path-card.featured h3 {
+    color: #263D59 !important;
+}
+
+
+/* รายละเอียดเริ่มต้น */
+.learning-path-grid .path-card p,
+.learning-path-grid .path-card.featured p {
+    color: #7A8799 !important;
+}
+
+
+/* ปุ่มข้อความด้านล่าง */
+.learning-path-grid .path-card .path-link,
+.learning-path-grid .path-card.featured .path-link {
+    color: #348E99 !important;
+}
+
+
+/* เลข 01 - 05 */
+.learning-path-grid .path-card .path-number,
+.learning-path-grid .path-card.featured .path-number {
+    color: #E5EDF1 !important;
+}
+
+
+/* =====================================================
+   เมื่อเอาเมาส์วาง
+===================================================== */
+
+.learning-path-grid .path-card:hover {
+    background: #153F63 !important;
+    border-color: #153F63 !important;
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(38, 61, 89, 0.18);
+}
+
+
+/* หัวข้อเมื่อ Hover */
+.learning-path-grid .path-card:hover h3 {
+    color: #ffffff !important;
+}
+
+
+/* รายละเอียดเมื่อ Hover */
+.learning-path-grid .path-card:hover p {
+    color: #D8E5ED !important;
+}
+
+
+/* ลิงก์ด้านล่างเมื่อ Hover */
+.learning-path-grid .path-card:hover .path-link {
+    color: #A0E7E5 !important;
+}
+
+
+/* เลขเมื่อ Hover */
+.learning-path-grid .path-card:hover .path-number {
+    color: rgba(255, 255, 255, 0.16) !important;
+}
+
+
+/* กล่องรูป */
+.learning-path-grid .path-card:hover .path-icon {
+    background: #EAFBFA !important;
+
+    transform: scale(1.06);
+}
+
+
+/* ทำให้กล่องรูปเคลื่อนไหวนุ่ม */
+.learning-path-grid .path-icon {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =====================================================
+   ตอนกำลังกด
+===================================================== */
+
+.learning-path-grid .path-card:active {
+    transform: translateY(-3px) scale(0.98);
+}
+/* ===== รูปภาพตรงกลาง Hero ===== */
+
+.main-shield {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.main-shield-image {
+    width: 150px !important;
+    height: 150px !important;
+
+    max-width: 85%;
+    max-height: 85%;
+
+    object-fit: contain;
+
+    display: block;
+}
+/* =====================================================
+   GUIDE PAGE - 5 STEPS
+===================================================== */
+
+.info-grid {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 30px auto 60px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* ===== การ์ด ===== */
+
+.info-card {
+    min-height: 190px;
+
+    position: relative;
+
+    padding: 28px 30px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 10px 30px rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* เวลาเอาเมาส์ไปวาง */
+
+.info-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(38, 61, 89, 0.16);
+}
+
+
+/* ===== สีการ์ด ===== */
+
+.info-card.pink {
+    background: rgba(255, 174, 188, 0.82);
+}
+
+.info-card.blue {
+    background: rgba(160, 231, 229, 0.82);
+}
+
+.info-card.mint {
+    background: rgba(180, 248, 200, 0.82);
+}
+
+.info-card.yellow {
+    background: rgba(251, 231, 198, 0.88);
+}
+
+
+/* ===== ไอคอน ===== */
+
+.info-card .icon {
+    width: 62px;
+    height: 62px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border-radius: 17px;
+
+    font-size: 30px;
+
+    overflow: hidden;
+}
+
+
+/* ถ้าเปลี่ยน Emoji เป็นรูปภาพ */
+
+.info-card .icon img {
+    width: 50px;
+    height: 50px;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ===== หัวข้อ ===== */
+
+.info-card h3 {
+    margin: 0 0 12px;
+
+    color: #263D59;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+/* ===== รายละเอียด ===== */
+
+.info-card p {
+    margin: 0;
+
+    color: #53677D;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   การ์ดที่ 5 อยู่ตรงกลาง
+===================================================== */
+
+.info-card:nth-child(5) {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 11px);
+
+    justify-self: center;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .info-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        padding: 0 18px;
+    }
+
+    .info-card {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+    .info-card:nth-child(5) {
+        grid-column: auto;
+
+        width: 100%;
+    }
+}
+/* =====================================================
+   GUIDE HEADING BOX
+===================================================== */
+
+.guide-heading-box {
+    width: calc(100% - 80px);
+    max-width: 1450px;
+
+    margin: 35px auto 35px;
+    padding: 28px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 26px;
+
+    box-shadow: 0 10px 30px rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+}
+
+
+/* HOW TO LEARN */
+
+.guide-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4A9EA2;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* หัวข้อ */
+
+.guide-heading-box h1 {
+    margin: 0 0 10px;
+
+    color: #263D59;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+/* คำอธิบาย */
+
+.guide-heading-box p {
+    margin: 0;
+
+    color: #66778A;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .guide-heading-box {
+        width: calc(100% - 36px);
+
+        margin: 20px auto 25px;
+        padding: 24px 20px;
+    }
+
+    .guide-heading-box h1 {
+        font-size: 30px;
+    }
+}
+/* =====================================================
+   OBJECTIVE PAGE HEADING
+===================================================== */
+
+.objective-heading-box {
+    width: calc(100% - 80px);
+    max-width: 1450px;
+
+    margin: 35px auto 35px;
+    padding: 28px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 26px;
+
+    box-shadow: 0 10px 30px rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+}
+
+
+/* LEARNING OBJECTIVES */
+
+.objective-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4A9EA2;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* หัวข้อ */
+
+.objective-heading-box h1 {
+    margin: 0 0 10px;
+
+    color: #263D59;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+/* คำอธิบาย */
+
+.objective-heading-box p {
+    margin: 0;
+
+    color: #66778A;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .objective-heading-box {
+        width: calc(100% - 36px);
+
+        margin: 20px auto 25px;
+        padding: 24px 20px;
+    }
+
+    .objective-heading-box h1 {
+        font-size: 30px;
+    }
+}
+/* =====================================================
+   PRE-TEST / POST-TEST HEADING
+===================================================== */
+
+.quiz-heading-box {
+    width: 100%;
+
+    margin: 25px auto 20px;
+    padding: 25px 32px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 26px;
+
+    box-shadow: 0 10px 30px rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+}
+
+
+/* PRE-TEST / POST-TEST */
+
+.quiz-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #4A9EA2;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ชื่อแบบทดสอบ */
+
+.quiz-heading-box h1 {
+    margin: 0 0 8px;
+
+    color: #263D59;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+/* คำอธิบาย */
+
+.quiz-heading-box p {
+    margin: 0;
+
+    color: #66778A;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .quiz-heading-box {
+        padding: 22px 20px;
+        margin-top: 18px;
+    }
+
+    .quiz-heading-box h1 {
+        font-size: 30px;
+    }
+
+}
+/* =====================================================
+   QUIZ STUDENT BAR
+===================================================== */
+
+.student-bar {
+    width: fit-content;
+    min-width: 360px;
+    max-width: 100%;
+
+    margin: 18px 0 14px;
+    padding: 10px 20px 10px 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(160, 231, 229, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+
+    box-shadow: 0 6px 18px rgba(38, 61, 89, 0.08);
+
+    color: #263D59;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+
+/* ถ้า JS สร้างรูปนักเรียนอยู่ใน studentInfo */
+
+.student-bar img {
+    width: 42px !important;
+    height: 42px !important;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+
+/* ข้อความด้านใน */
+
+.student-bar span,
+.student-bar strong {
+    color: #263D59;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .student-bar {
+        width: 100%;
+        min-width: 0;
+
+        border-radius: 18px;
+
+        box-sizing: border-box;
+    }
+
+}
+/* =====================================================
+   ACTIVITY PAGE HEADING
+===================================================== */
+
+.activity-heading-box {
+    width: 100%;
+
+    margin: 25px auto 30px;
+    padding: 28px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.84);
+
+    border: 1px solid rgba(160, 231, 229, 0.9);
+    border-radius: 26px;
+
+    box-shadow: 0 10px 30px rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    box-sizing: border-box;
+}
+
+
+/* MISSION */
+
+.activity-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding: 5px 14px;
+
+    background: rgba(180, 248, 200, 0.65);
+
+    color: #3E979B;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+
+/* ภารกิจนักสืบดิจิทัล */
+
+.activity-heading-box h1 {
+    margin: 3px 0 8px;
+
+    color: #263D59;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+/* คำอธิบาย */
+
+.activity-heading-box p {
+    margin: 0;
+
+    color: #66778A;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .activity-heading-box {
+        padding: 23px 20px;
+        margin: 18px auto 25px;
+    }
+
+    .activity-heading-box h1 {
+        font-size: 29px;
+    }
+
+}
+/* =====================================================
+   INTERACTIVE ACTIVITY
+===================================================== */
+
+.activity-container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 30px 0 70px;
+}
+
+
+/* ===== HEADING ===== */
+
+.activity-heading-box {
+    padding: 28px 35px;
+    margin-bottom: 22px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.86);
+
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 26px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 10px 30px rgba(38,61,89,.10);
+}
+
+.activity-label {
+    display: inline-block;
+
+    padding: 5px 14px;
+    margin-bottom: 7px;
+
+    border-radius: 999px;
+
+    background: #B4F8C8;
+
+    color: #3E8F78;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.activity-heading-box h1 {
+    margin: 3px 0 8px;
+
+    color: #263D59;
+
+    font-size: 38px;
+}
+
+.activity-heading-box p {
+    margin: 0;
+
+    color: #66778A;
+
+    font-size: 16px;
+}
+
+
+/* ===== PROGRESS ===== */
+
+.mission-progress {
+    margin-bottom: 24px;
+
+    padding: 16px 20px;
+
+    background: rgba(255,255,255,.88);
+
+    border-radius: 18px;
+}
+
+.mission-progress-top {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    color: #263D59;
+}
+
+.mission-progress-track {
+    height: 10px;
+
+    overflow: hidden;
+
+    background: #EDF3F5;
+
+    border-radius: 999px;
+}
+
+.mission-progress-fill {
+    width: 0%;
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #A0E7E5,
+        #B4F8C8
+    );
+
+    transition: width .4s ease;
+}
+
+
+/* ===== MISSION CARD ===== */
+
+.mission-card {
+    display: none;
+
+    padding: 35px;
+
+    background: rgba(255,255,255,.94);
+
+    border: 1px solid rgba(255,255,255,.95);
+    border-radius: 28px;
+
+    box-shadow:
+        0 15px 40px rgba(38,61,89,.12);
+}
+
+.mission-card.active {
+    display: block;
+}
+
+.mission-number {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    margin-bottom: 22px;
+
+    border-radius: 999px;
+
+    background: #FBE7C6;
+
+    color: #8C642D;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* ===== TITLE ===== */
+
+.mission-title {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.mission-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background: #E9FAFA;
+
+    font-size: 30px;
+}
+
+.mission-title h2 {
+    margin: 0 0 3px;
+
+    color: #263D59;
+
+    font-size: 27px;
+}
+
+.mission-title p {
+    margin: 0;
+
+    color: #718095;
+}
+
+
+/* ===== FAKE NEWS ===== */
+
+.fake-post {
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    background: #F8FAFC;
+
+    border: 1px solid #DCE6EC;
+    border-radius: 20px;
+}
+
+.fake-post-head {
+    margin-bottom: 15px;
+
+    color: #4A9EA2;
+
+    font-weight: 700;
+}
+
+.fake-post h3 {
+    margin: 0 0 10px;
+
+    color: #263D59;
+}
+
+.fake-post p {
+    color: #53677D;
+
+    line-height: 1.7;
+}
+
+.fake-source {
+    margin-top: 16px;
+
+    color: #8A98A8;
+
+    font-size: 13px;
+}
+
+
+/* ===== QUESTION ===== */
+
+.mission-question {
+    margin: 22px 0 15px;
+
+    color: #263D59;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* ===== OPTIONS ===== */
+
+.mission-options {
+    display: grid;
+
+    gap: 12px;
+}
+
+.mission-choice,
+.file-choice {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    background: #FFFFFF;
+
+    color: #263D59;
+
+    border: 1px solid #D9E3EA;
+    border-radius: 15px;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+.mission-choice:hover,
+.file-choice:hover {
+    transform: translateY(-2px);
+
+    border-color: #A0E7E5;
+
+    background: #F3FFFF;
+}
+
+
+/* คำตอบถูก */
+
+.mission-choice.correct,
+.file-choice.correct {
+    background: #E4FAEB;
+
+    border-color: #78D99A;
+
+    color: #287445;
+}
+
+
+/* คำตอบผิด */
+
+.mission-choice.wrong,
+.file-choice.wrong {
+    background: #FFE8EC;
+
+    border-color: #FFAEBC;
+
+    color: #A64256;
+}
+
+
+/* ===== FEEDBACK ===== */
+
+.mission-feedback {
+    display: none;
+
+    margin-top: 16px;
+    padding: 15px 18px;
+
+    border-radius: 15px;
+
+    line-height: 1.65;
+}
+
+.mission-feedback.show {
+    display: block;
+}
+
+.mission-feedback.success {
+    background: #E7FAED;
+
+    color: #287445;
+}
+
+.mission-feedback.error {
+    background: #FFECEF;
+
+    color: #9A4053;
+}
+
+
+/* ===== NEXT ===== */
+
+.mission-next,
+.finish-mission {
+    display: block;
+
+    margin: 25px 0 0 auto;
+
+    padding: 13px 22px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: #263D59;
+
+    color: white;
+
+    font-family: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.mission-next:disabled,
+.finish-mission:disabled {
+    opacity: .35;
+
+    cursor: not-allowed;
+}
+
+
+/* ===== PASSWORD ===== */
+
+.mission-story {
+    padding: 18px 20px;
+
+    margin-bottom: 22px;
+
+    background: #F8FAFC;
+
+    border-radius: 16px;
+
+    color: #53677D;
+
+    line-height: 1.6;
+}
+
+.mission-story strong {
+    color: #263D59;
+}
+
+.mission-story small {
+    color: #A05A65;
+}
+
+.password-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #263D59;
+
+    font-weight: 700;
+}
+
+.password-practice {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #DCE6EC;
+    border-radius: 14px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.password-practice:focus {
+    border-color: #A0E7E5;
+}
+
+.strength-area {
+    margin-top: 15px;
+}
+
+.strength-track {
+    height: 12px;
+
+    margin-bottom: 8px;
+
+    overflow: hidden;
+
+    background: #EDF2F5;
+
+    border-radius: 999px;
+}
+
+.strength-fill {
+    width: 0%;
+    height: 100%;
+
+    background: #FFAEBC;
+
+    border-radius: inherit;
+
+    transition: .3s;
+}
+
+.password-rules {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+
+    gap: 9px;
+
+    margin-top: 20px;
+}
+
+.password-rules div {
+    padding: 11px 14px;
+
+    background: #F7F9FA;
+
+    border-radius: 12px;
+
+    color: #7A8795;
+}
+
+.password-rules .passed {
+    background: #E5FAEC;
+
+    color: #287445;
+}
+
+
+/* ===== CHAT ===== */
+
+.chat-simulation {
+    max-width: 650px;
+
+    padding: 22px;
+
+    margin: 0 auto 25px;
+
+    background: #F5F8FA;
+
+    border-radius: 20px;
+}
+
+.chat-name {
+    margin-bottom: 12px;
+
+    color: #263D59;
+
+    font-weight: 700;
+}
+
+.chat-message {
+    width: fit-content;
+    max-width: 85%;
+
+    padding: 14px 17px;
+
+    background: white;
+
+    border-radius: 5px 17px 17px 17px;
+
+    color: #53677D;
+
+    line-height: 1.7;
+}
+
+
+/* ===== MALWARE ===== */
+
+.file-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 15px;
+}
+
+.file-choice {
+    min-height: 180px;
+
+    text-align: center;
+}
+
+.file-choice span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 45px;
+}
+
+.file-choice strong {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.file-choice small {
+    display: block;
+
+    color: #788798;
+
+    line-height: 1.5;
+}
+
+
+/* ===== FINAL ===== */
+
+.danger-message {
+    padding: 24px;
+
+    margin-bottom: 25px;
+
+    background: #FFF1F3;
+
+    border: 1px solid #FFCCD4;
+    border-radius: 18px;
+}
+
+.danger-message strong {
+    color: #B34258;
+}
+
+.danger-message p {
+    color: #263D59;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.danger-message span {
+    color: #A35B68;
+
+    font-size: 13px;
+}
+
+
+/* ===== RESULT ===== */
+
+.mission-result {
+    display: none;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.94);
+
+    border-radius: 28px;
+}
+
+.mission-result.show {
+    display: block;
+}
+
+.result-trophy {
+    font-size: 70px;
+}
+
+.result-small {
+    color: #4A9EA2;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.mission-result h2 {
+    margin: 8px 0;
+
+    color: #263D59;
+
+    font-size: 30px;
+}
+
+.mission-result p {
+    color: #68798C;
+}
+
+.mission-score {
+    width: 150px;
+    height: 150px;
+
+    margin: 25px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #E8FBF0;
+
+    border: 8px solid #B4F8C8;
+}
+
+.mission-score strong {
+    color: #263D59;
+
+    font-size: 30px;
+}
+
+.mission-score span {
+    color: #6B7D8D;
+
+    font-size: 13px;
+}
+
+.activity-posttest-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #263D59;
+
+    color: white;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .activity-container {
+        width: calc(100% - 28px);
+    }
+
+    .activity-heading-box h1 {
+        font-size: 29px;
+    }
+
+    .mission-card {
+        padding: 24px 18px;
+    }
+
+    .password-rules,
+    .file-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-title h2 {
+        font-size: 22px;
+    }
+
+}
+/* =========================================
+   ACTIVITY PAGE HEADING
+========================================= */
+
+.activity-heading {
+    max-width: 1400px;
+    margin: 30px auto 22px;
+    padding: 32px 40px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(160, 231, 229, 0.75);
+    border-radius: 28px;
+
+    box-shadow: 0 12px 35px rgba(38, 61, 89, 0.08);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.activity-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #459CA4;
+
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.activity-heading h1 {
+    margin: 0 0 10px;
+
+    color: #263D59;
+
+    font-size: clamp(32px, 3vw, 46px);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.activity-heading p {
+    margin: 0 auto;
+
+    max-width: 760px;
+
+    color: #64748B;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+/* =====================================================
+   DIGITAL SAFETY SIMULATOR
+===================================================== */
+
+.simulator-page {
+    width: min(1450px, 92%);
+    margin: 0 auto;
+    padding: 35px 0 70px;
+}
+
+
+/* ---------- HEADING ---------- */
+
+.simulator-heading {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 25px;
+}
+
+.simulator-heading > span {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #459CA4;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.simulator-heading h1 {
+    margin: 0 0 10px;
+    color: #263D59;
+    font-size: clamp(32px, 4vw, 48px);
+}
+
+.simulator-heading p {
+    margin: 0;
+    color: #64748B;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ---------- PROGRESS ---------- */
+
+.sim-progress {
+    max-width: 1100px;
+    margin: 0 auto 25px;
+    padding: 17px 22px;
+
+    background: rgba(255,255,255,.9);
+    border: 1px solid rgba(160,231,229,.8);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(38,61,89,.07);
+}
+
+.sim-progress-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    color: #263D59;
+}
+
+.sim-progress-track {
+    height: 10px;
+    background: #EAF2F4;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.sim-progress-fill {
+    width: 0;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #A0E7E5,
+        #B4F8C8
+    );
+
+    border-radius: inherit;
+    transition: width .5s ease;
+}
+
+
+/* =====================================================
+   COMPUTER
+===================================================== */
+
+.computer-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #FFFFFF;
+
+    border: 8px solid #263D59;
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(38,61,89,.18);
+}
+
+
+/* ---------- TOP BAR ---------- */
+
+.computer-topbar {
+    height: 70px;
+    padding: 0 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #263D59;
+    color: white;
+}
+
+.computer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.computer-logo {
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+    place-items: center;
+
+    background: #A0E7E5;
+    border-radius: 13px;
+
+    font-size: 23px;
+}
+
+.computer-brand div {
+    display: flex;
+    flex-direction: column;
+}
+
+.computer-brand small {
+    opacity: .65;
+}
+
+.window-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.window-controls span {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 8px;
+    background: rgba(255,255,255,.12);
+}
+
+
+/* =====================================================
+   DESKTOP
+===================================================== */
+
+.computer-screen {
+    min-height: 690px;
+
+    position: relative;
+
+    padding: 55px 30px 90px;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(180,248,200,.6),
+            transparent 34%
+        ),
+        linear-gradient(
+            135deg,
+            #F4FFFF,
+            #E7FAFA
+        );
+}
+
+
+/* ---------- DESKTOP ICONS ---------- */
+
+.desktop-icons {
+    position: absolute;
+    left: 22px;
+    top: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.desktop-icon {
+    width: 72px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #263D59;
+    font-size: 12px;
+}
+
+.desktop-icon span {
+    font-size: 29px;
+}
+
+
+/* =====================================================
+   POPUP WINDOW
+===================================================== */
+
+.sim-window {
+    display: none;
+
+    width: min(760px, 86%);
+    margin: 0 auto;
+
+    background: white;
+
+    border: 1px solid #DCE8EB;
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 60px rgba(38,61,89,.18);
+}
+
+.sim-window.active {
+    display: block;
+    animation: popupIn .4s ease;
+}
+
+@keyframes popupIn {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(30px)
+            scale(.94);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ---------- POPUP TITLE ---------- */
+
+.popup-titlebar {
+    min-height: 52px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #A0E7E5;
+
+    color: #263D59;
+    font-weight: 700;
+}
+
+.popup-titlebar.danger {
+    background: #FBE7C6;
+}
+
+.popup-titlebar.security {
+    background: #B4F8C8;
+}
+
+.popup-titlebar > span {
+    opacity: .55;
+}
+
+
+/* ---------- POPUP BODY ---------- */
+
+.popup-body {
+    padding: 32px;
+}
+
+.mission-tag {
+    display: inline-block;
+
+    padding: 7px 13px;
+    margin-bottom: 20px;
+
+    border-radius: 999px;
+
+    background: #EEF9F9;
+    color: #459CA4;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.popup-body h2 {
+    color: #263D59;
+}
+
+.popup-body p {
+    color: #64748B;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CHAT
+===================================================== */
+
+.chat-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-avatar {
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: #FBE7C6;
+
+    font-size: 25px;
+}
+
+.chat-user > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-user small {
+    color: #8794A5;
+}
+
+.chat-bubble {
+    max-width: 520px;
+
+    margin: 18px 0 25px;
+    padding: 17px 20px;
+
+    background: #EEF9F9;
+
+    border-radius:
+        6px 20px 20px 20px;
+
+    color: #263D59;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   QUESTION / OPTIONS
+===================================================== */
+
+.sim-question {
+    margin: 22px 0 13px !important;
+
+    color: #263D59 !important;
+    font-weight: 700;
+}
+
+.sim-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 11px;
+}
+
+.sim-options.two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sim-choice {
+    min-height: 65px;
+    padding: 13px 15px;
+
+    border: 2px solid #DFE8EC;
+    border-radius: 15px;
+
+    background: white;
+
+    color: #263D59;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.sim-choice:hover {
+    transform: translateY(-3px);
+
+    border-color: #A0E7E5;
+    background: #F5FFFF;
+}
+
+.sim-choice.correct {
+    border-color: #77DEA0;
+    background: #E9FFF0;
+}
+
+.sim-choice.wrong {
+    border-color: #FF9CAF;
+    background: #FFF0F3;
+}
+
+
+/* =====================================================
+   FEEDBACK
+===================================================== */
+
+.sim-feedback {
+    display: none;
+
+    margin-top: 18px;
+    padding: 15px 18px;
+
+    border-radius: 14px;
+
+    line-height: 1.6;
+}
+
+.sim-feedback.show {
+    display: block;
+    animation: feedbackIn .25s ease;
+}
+
+.sim-feedback.success {
+    background: #E9FFF0;
+    color: #287747;
+}
+
+.sim-feedback.error {
+    background: #FFF0F3;
+    color: #A74358;
+}
+
+@keyframes feedbackIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   NEXT BUTTON
+===================================================== */
+
+.sim-next,
+.sim-finish,
+.sim-posttest-btn {
+    display: block;
+
+    width: fit-content;
+
+    margin: 22px 0 0 auto;
+    padding: 13px 23px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: #263D59;
+    color: white;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.sim-next:disabled,
+.sim-finish:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   PASSWORD LAB
+===================================================== */
+
+.password-simulator {
+    margin-top: 20px;
+    padding: 22px;
+
+    border: 1px solid #DDE9EB;
+    border-radius: 18px;
+
+    background: #FAFFFF;
+}
+
+.password-simulator label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #263D59;
+    font-weight: 700;
+}
+
+.password-input-row {
+    position: relative;
+}
+
+.password-input-row input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 50px 15px 15px;
+
+    border: 2px solid #DDE7EB;
+    border-radius: 13px;
+
+    outline: none;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 16px;
+}
+
+.password-input-row input:focus {
+    border-color: #A0E7E5;
+}
+
+.password-input-row span {
+    position: absolute;
+    right: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.password-requirements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin: 18px 0;
+
+    color: #778697;
+    font-size: 14px;
+}
+
+.password-requirements .passed {
+    color: #2C9C59;
+    font-weight: 700;
+}
+
+.password-strength-track {
+    height: 10px;
+
+    overflow: hidden;
+
+    background: #E7ECEE;
+    border-radius: 999px;
+}
+
+.password-strength-fill {
+    width: 0;
+    height: 100%;
+
+    background: #B4F8C8;
+
+    border-radius: inherit;
+
+    transition: width .3s ease;
+}
+
+.password-strength strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #263D59;
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   EMAIL
+===================================================== */
+
+.email-box {
+    border: 1px solid #DDE7EA;
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.email-line {
+    display: flex;
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    border-bottom: 1px solid #EDF1F3;
+
+    color: #263D59;
+}
+
+.email-line span {
+    min-width: 50px;
+    color: #8995A4;
+}
+
+.fake-email-message {
+    padding: 22px;
+
+    color: #263D59;
+    line-height: 1.6;
+}
+
+.fake-link {
+    display: inline-block;
+
+    padding: 9px 16px;
+
+    border-radius: 9px;
+
+    background: #FFAEBC;
+
+    color: #7B3442;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DOWNLOAD
+===================================================== */
+
+.download-alert {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 20px;
+
+    background: #FAFCFD;
+
+    border: 1px solid #DDE7EA;
+    border-radius: 17px;
+}
+
+.download-icon {
+    font-size: 48px;
+}
+
+.download-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.download-info strong {
+    color: #263D59;
+    font-size: 20px;
+}
+
+.download-info small,
+.download-info span {
+    color: #82909F;
+}
+
+.security-warning {
+    margin-top: 15px;
+    padding: 14px 16px;
+
+    border-radius: 13px;
+
+    background: #FFF6E5;
+    color: #8B641F;
+}
+
+
+/* =====================================================
+   FINAL MISSION
+===================================================== */
+
+.final-shield {
+    text-align: center;
+    font-size: 75px;
+}
+
+.security-notification {
+    margin: 18px 0;
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: #EEFFF3;
+
+    color: #263D59;
+}
+
+
+/* =====================================================
+   COMPLETE
+===================================================== */
+
+.sim-complete {
+    display: none;
+
+    width: min(650px, 85%);
+
+    margin: 30px auto;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 60px rgba(38,61,89,.16);
+}
+
+.sim-complete.show {
+    display: block;
+    animation: popupIn .4s ease;
+}
+
+.complete-shield {
+    font-size: 80px;
+}
+
+.sim-complete > span {
+    color: #459CA4;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sim-complete h2 {
+    margin: 7px 0;
+
+    color: #263D59;
+    font-size: 36px;
+}
+
+.sim-complete p {
+    color: #64748B;
+}
+
+.complete-score {
+    width: 150px;
+    height: 150px;
+
+    margin: 25px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 8px solid #B4F8C8;
+    border-radius: 50%;
+
+    background: #F2FFF6;
+}
+
+.complete-score small {
+    color: #718096;
+}
+
+.complete-score strong {
+    color: #263D59;
+    font-size: 32px;
+}
+
+.sim-posttest-btn {
+    margin: 20px auto 0;
+}
+
+
+/* =====================================================
+   TASK BAR
+===================================================== */
+
+.computer-taskbar {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 52px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    background: rgba(38,61,89,.94);
+
+    color: white;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .computer-screen {
+        padding:
+            30px 15px
+            80px;
+    }
+
+    .desktop-icons {
+        display: none;
+    }
+
+    .sim-window {
+        width: 100%;
+    }
+
+    .popup-body {
+        padding: 22px;
+    }
+
+    .sim-options,
+    .sim-options.two {
+        grid-template-columns: 1fr;
+    }
+
+    .password-requirements {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================
+   OBJECTIVE CARDS
+========================================= */
+
+.objective-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+
+/* การ์ด */
+
+.objective-card {
+    position: relative;
+
+    min-height: 190px;
+    padding: 55px 35px 30px;
+
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow: 0 12px 30px rgba(38, 61, 89, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* สีการ์ดอ่อน */
+
+.objective-card.pink {
+    background: #FFE1E7;
+}
+
+.objective-card.blue {
+    background: #DDF7F6;
+}
+
+
+/* เลขด้านซ้าย */
+
+.objective-number {
+    position: absolute;
+
+    top: 18px;
+    left: 22px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #263D59;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* เนื้อหาด้านขวา */
+
+.objective-content {
+    flex: 1;
+}
+
+.objective-content h3 {
+    margin: 0 0 10px;
+
+    color: #263D59;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.objective-content p {
+    margin: 0;
+
+    color: #52677F;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* Hover */
+
+.objective-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 17px 35px rgba(38, 61, 89, 0.13);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .objective-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .objective-card {
+        padding: 25px;
+    }
+
+    .objective-number {
+        width: 58px;
+        height: 58px;
+
+        font-size: 27px;
+    }
+
+}
+.objective-reference {
+    max-width: 1100px;
+    margin: 25px auto 10px;
+    padding: 18px 24px;
+
+    background: rgba(255, 255, 255, 0.75);
+    border-left: 4px solid #A0E7E5;
+    border-radius: 14px;
+
+    color: #52677F;
+    font-size: 15px;
+}
+
+.objective-reference span {
+    color: #263D59;
+    font-weight: 700;
+}
+
+.objective-reference p {
+    display: inline;
+    margin-left: 8px;
+}
+
+.objective-reference a {
+    color: #263D59;
+    font-weight: 600;
+    text-decoration: underline;
+}
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    margin-top: 60px;
+    padding: 22px 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+    border-top: 1px solid rgba(38, 61, 89, 0.08);
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #263D59;
+}
+
+.footer-brand strong {
+    font-size: 16px;
+}
+
+.footer-brand span {
+    font-size: 13px;
+    color: #8A9AAF;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #52677F;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #263D59;
+    text-decoration: underline;
+}
+
+.footer-links span {
+    color: #A0E7E5;
+}
+
+@media (max-width: 650px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* =========================================
+   GUIDE PAGE - SOFT PASTEL COLORS
+========================================= */
+
+.guide-heading-box ~ .info-grid .info-card.pink {
+    background: rgba(255, 225, 231, 0.92);
+}
+
+.guide-heading-box ~ .info-grid .info-card.blue {
+    background: rgba(221, 247, 246, 0.92);
+}
+
+.guide-heading-box ~ .info-grid .info-card.mint {
+    background: rgba(226, 250, 233, 0.92);
+}
+
+.guide-heading-box ~ .info-grid .info-card.yellow {
+    background: rgba(255, 244, 223, 0.92);
+}
+/* =====================================================
+   CREATOR INFOGRAPHIC
+===================================================== */
+
+.creator-page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+
+/* หัวข้อหน้าผู้จัดทำ */
+
+.creator-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.creator-heading h1 {
+    margin: 10px 0 8px;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    color: #263D59;
+}
+
+.creator-heading p {
+    margin: 0;
+
+    font-size: 17px;
+    color: #718096;
+}
+
+.creator-label {
+    display: inline-block;
+
+    padding: 7px 18px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   INFOGRAPHIC
+===================================================== */
+
+.creator-infographic {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 15px 40px
+        rgba(38, 61, 89, 0.12);
+
+    overflow: hidden;
+}
+
+
+/* รูปอินโฟกราฟิก */
+
+.creator-infographic-img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 22px;
+
+    object-fit: cover;
+}
+
+
+/* เอฟเฟกต์เล็กน้อย */
+
+.creator-infographic {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.creator-infographic:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 20px 48px
+        rgba(38, 61, 89, 0.16);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .creator-page {
+        padding-top: 25px;
+        padding-bottom: 40px;
+    }
+
+    .creator-heading {
+        margin-bottom: 20px;
+    }
+
+    .creator-heading h1 {
+        font-size: 32px;
+    }
+
+    .creator-heading p {
+        font-size: 15px;
+    }
+
+    .creator-infographic {
+        padding: 7px;
+        border-radius: 20px;
+    }
+
+    .creator-infographic-img {
+        border-radius: 15px;
+    }
+}
+/* =====================================================
+   GUIDE - ADVENTURE LEARNING MAP
+===================================================== */
+
+.guide-map-page {
+    width: 100%;
+    padding: 40px 25px 70px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.guide-map-heading {
+    width: min(900px, 92%);
+    margin: 0 auto 28px;
+
+    padding: 22px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(38, 61, 89, 0.12);
+}
+
+.guide-map-label {
+    display: inline-block;
+
+    padding: 7px 18px;
+    margin-bottom: 6px;
+
+    border-radius: 999px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.guide-map-heading h1 {
+    margin: 4px 0 5px;
+
+    color: #263D59;
+
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.guide-map-heading p {
+    margin: 0;
+
+    color: #60758D;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.adventure-map {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+    height: 900px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+    border-radius: 35px;
+
+    /* พื้นหลังแผนที่ */
+    background-image: url("cc.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow:
+        0 20px 50px
+        rgba(38, 61, 89, 0.15);
+}
+
+/* =====================================================
+   CURVED LEARNING ROAD
+===================================================== */
+
+.learning-road {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* เงาใต้ถนน */
+
+.road-shadow {
+    fill: none;
+
+    stroke: rgba(38, 61, 89, 0.15);
+
+    stroke-width: 100;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transform: translateY(10px);
+}
+
+
+/* ถนนสีขาว */
+
+.road-white {
+    fill: none;
+
+    stroke: #FFFFFF;
+
+    stroke-width: 92;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* เส้นประกลางถนน */
+
+.road-dash {
+    fill: none;
+
+    stroke: #B8C3CF;
+
+    stroke-width: 4;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 15 18;
+}
+/* =====================================================
+   MAP POINT
+===================================================== */
+
+.map-point {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    text-decoration: none;
+
+    z-index: 5;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.map-point:hover {
+    transform:
+        translateY(-7px)
+        scale(1.025);
+
+    filter:
+        drop-shadow(
+            0 12px 12px
+            rgba(38,61,89,0.16)
+        );
+}
+
+
+/* =====================================================
+   POSITION
+===================================================== */
+
+.point-1 {
+    left: 8%;
+    top: 105px;
+}
+
+.point-2 {
+    right: 7%;
+    top: 245px;
+}
+
+.point-3 {
+    left: 8%;
+    top: 410px;
+}
+
+.point-4 {
+    right: 7%;
+    top: 575px;
+}
+
+.point-5 {
+    left: 20%;
+    top: 735px;
+}
+
+
+/* =====================================================
+   CIRCLE
+===================================================== */
+
+.mission-circle {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 7px solid #FFFFFF;
+
+    box-shadow:
+        0 10px 24px
+        rgba(38,61,89,0.18);
+}
+
+
+/* COLORS */
+
+.mission-circle.pink {
+    background:
+        linear-gradient(
+            145deg,
+            #FFDCE4,
+            #FFAEBC
+        );
+}
+
+.mission-circle.blue {
+    background:
+        linear-gradient(
+            145deg,
+            #DDF9F8,
+            #A0E7E5
+        );
+}
+
+.mission-circle.mint {
+    background:
+        linear-gradient(
+            145deg,
+            #E3FCEB,
+            #B4F8C8
+        );
+}
+
+.mission-circle.yellow {
+    background:
+        linear-gradient(
+            145deg,
+            #FFF6E5,
+            #FBE7C6
+        );
+}
+
+
+/* NUMBER */
+
+.mission-number {
+    position: absolute;
+
+    width: 38px;
+    height: 38px;
+
+    top: -12px;
+    left: -8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #263D59;
+    color: #FFFFFF;
+
+    border: 3px solid #FFFFFF;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* ICON */
+
+.mission-icon {
+    font-size: 50px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.mission-label {
+    width: 300px;
+
+    padding: 17px 22px;
+
+    border-radius: 22px;
+
+    border:
+        2px solid
+        rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 9px 22px
+        rgba(38,61,89,0.12);
+}
+
+
+/* สีป้าย */
+
+.pink-label {
+    background:
+        rgba(255, 225, 231, 0.95);
+}
+
+.blue-label {
+    background:
+        rgba(221, 247, 246, 0.95);
+}
+
+.mint-label {
+    background:
+        rgba(226, 250, 233, 0.95);
+}
+
+.yellow-label {
+    background:
+        rgba(255, 244, 223, 0.95);
+}
+
+
+.mission-label h2 {
+    margin: 0 0 4px;
+
+    color: #263D59;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.mission-label p {
+    margin: 0;
+
+    color: #5F7186;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   START / FINISH
+===================================================== */
+
+.start-sign,
+.finish-sign {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 10px 18px;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    color: #263D59;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 8px 18px
+        rgba(38,61,89,0.15);
+
+    z-index: 6;
+}
+
+.start-sign {
+    left: 3%;
+    top: 35px;
+
+    transform: rotate(-4deg);
+}
+
+.finish-sign {
+    right: 5%;
+    bottom: 35px;
+
+    transform: rotate(4deg);
+}
+
+
+/* =====================================================
+   PAGE NAV
+===================================================== */
+
+.guide-map-page .page-nav {
+    width: min(1200px, 100%);
+
+    margin: 30px auto 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .adventure-map {
+        height: auto;
+
+        padding:
+            90px 20px
+            100px;
+
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 32px;
+    }
+
+   .learning-road {
+        display: none;
+    }
+
+    .map-point {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+    }
+
+    .map-point:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+
+    .mission-label {
+        width: auto;
+        flex: 1;
+    }
+
+    .start-sign {
+        top: 22px;
+        left: 22px;
+    }
+
+    .finish-sign {
+        right: 22px;
+        bottom: 22px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .adventure-map {
+        height: auto;
+
+        padding: 90px 20px 100px;
+
+        background-position: center;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 32px;
+    }
+
+    .learning-road {
+        display: none;
+    }
+
+    .map-point {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+    }
+
+    .map-point:nth-of-type(even) {
+        flex-direction: row-reverse;
+    }
+
+    .mission-label {
+        width: auto;
+        flex: 1;
+    }
+
+    .start-sign {
+        top: 22px;
+        left: 22px;
+    }
+
+    .finish-sign {
+        right: 22px;
+        bottom: 22px;
+    }
+}
+/* =====================================================
+   STANDARD PAGE HEADING BOX
+   กรอบหัวข้อมาตรฐานทุกหน้า
+===================================================== */
+
+.page-heading,
+.lesson-heading,
+.activity-heading,
+.creator-heading {
+    width: min(1100px, 92%);
+
+    margin: 35px auto 40px;
+    padding: 32px 45px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* หัวข้อใหญ่ */
+
+.page-heading h1,
+.lesson-heading h1,
+.activity-heading h1,
+.creator-heading h1 {
+    margin: 8px 0 10px;
+
+    color: #263D59;
+
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+
+/* คำอธิบาย */
+
+.page-heading p,
+.lesson-heading p,
+.activity-heading p,
+.creator-heading p {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    color: #60758D;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ป้ายด้านบน */
+
+.page-heading .badge,
+.lesson-heading .badge,
+.activity-heading .badge,
+.creator-label {
+    display: inline-block;
+
+    padding: 7px 20px;
+    margin-bottom: 7px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .page-heading,
+    .lesson-heading,
+    .activity-heading,
+    .creator-heading {
+        width: calc(100% - 30px);
+
+        margin: 25px auto 30px;
+        padding: 25px 20px;
+
+        border-radius: 24px;
+    }
+
+    .page-heading h1,
+    .lesson-heading h1,
+    .activity-heading h1,
+    .creator-heading h1 {
+        font-size: 30px;
+    }
+
+    .page-heading p,
+    .lesson-heading p,
+    .activity-heading p,
+    .creator-heading p {
+        font-size: 15px;
+    }
+}
+.lesson-intro h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lesson-intro > p {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.lesson-label {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* =====================================================
+   LESSON INTRO - FINAL
+===================================================== */
+
+.lesson-intro {
+    width: calc(100% - 140px) !important;
+    max-width: 1250px !important;
+    min-height: 260px;
+
+    margin: 30px auto 35px !important;
+    padding: 28px 45px !important;
+
+    box-sizing: border-box;
+
+    /* จัดทุกอย่างกึ่งกลาง */
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center !important;
+
+    /* กรอบสีขาว */
+    background: rgba(255, 255, 255, 0.90) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* ป้าย LEARNING CONTENT */
+
+.lesson-intro .lesson-label {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 7px 20px;
+    margin: 0 auto 14px;
+
+    background: #A0E7E5;
+
+    color: #263D59;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* หัวข้อ */
+
+.lesson-intro h1 {
+    width: 100%;
+
+    margin: 0 auto 14px !important;
+
+    color: #263D59;
+
+    text-align: center !important;
+
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* คำอธิบาย */
+
+.lesson-intro > p {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto !important;
+
+    color: #60758D;
+
+    text-align: center !important;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* มือถือ */
+
+@media (max-width: 768px) {
+
+    .lesson-intro {
+        width: calc(100% - 30px) !important;
+        min-height: auto;
+
+        padding: 25px 20px !important;
+
+        border-radius: 24px;
+    }
+
+    .lesson-intro h1 {
+        font-size: 30px;
+    }
+
+    .lesson-intro > p {
+        font-size: 15px;
+    }
+}
+/* =====================================================
+   ACTIVITY HEADING
+===================================================== */
+
+.simulator-heading {
+    width: calc(100% - 140px);
+    max-width: 1250px;
+    min-height: 220px;
+
+    margin: 30px auto 30px;
+    padding: 28px 45px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.90);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+
+    box-shadow: 0 12px 35px rgba(38, 61, 89, 0.10);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* ป้าย DIGITAL SAFETY MISSION */
+
+.simulator-heading > span {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 7px 20px;
+    margin: 0 auto 13px;
+
+    border-radius: 999px;
+
+    background: #A0E7E5;
+    color: #263D59;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+
+/* ชื่อกิจกรรม */
+
+.simulator-heading h1 {
+    margin: 0 auto 10px;
+
+    color: #263D59;
+
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    text-align: center;
+}
+
+
+/* คำอธิบาย */
+
+.simulator-heading p {
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    color: #60758D;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .simulator-heading {
+        width: calc(100% - 30px);
+        min-height: auto;
+
+        padding: 25px 20px;
+
+        border-radius: 24px;
+    }
+
+    .simulator-heading h1 {
+        font-size: 30px;
+    }
+
+    .simulator-heading p {
+        font-size: 15px;
+    }
+}
+/* =====================================================
+   REFERENCE POPUP
+===================================================== */
+
+/* ปุ่มแหล่งอ้างอิงใน Footer */
+.reference-open {
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #60758D;
+    font-family: "Sarabun", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.reference-open:hover {
+    color: #263D59;
+}
+
+
+/* กล่อง Modal ทั้งหน้า */
+.reference-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+
+/* แสดง Modal */
+.reference-modal.show {
+    display: flex;
+}
+
+
+/* พื้นหลังมืดโปร่ง */
+.reference-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(38, 61, 89, 0.35);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* กล่องแหล่งอ้างอิง */
+.reference-popup {
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, 92%);
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 40px 45px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+
+    box-shadow: 0 20px 60px rgba(38, 61, 89, 0.20);
+}
+
+
+/* ปุ่ม X */
+.reference-close {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #F5F8FA;
+
+    color: #263D59;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.reference-close:hover {
+    background: #FFE1E7;
+}
+
+
+/* ส่วนหัว */
+.reference-popup-heading {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.reference-label {
+    display: inline-block;
+
+    padding: 7px 20px;
+    margin-bottom: 12px;
+
+    border-radius: 999px;
+
+    background: #A0E7E5;
+
+    color: #263D59;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.reference-popup-heading h2 {
+    margin: 0 0 8px;
+
+    color: #263D59;
+
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.reference-popup-heading p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #60758D;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* รายการอ้างอิง */
+.reference-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.reference-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    background: #F8FBFC;
+
+    border: 1px solid #E7EEF2;
+    border-radius: 20px;
+}
+
+.reference-number {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 14px;
+
+    background: #A0E7E5;
+
+    color: #263D59;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.reference-detail,
+.reference-item > div {
+    flex: 1;
+}
+
+.reference-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #263D59;
+
+    font-size: 17px;
+}
+
+.reference-item p {
+    margin: 0;
+
+    color: #60758D;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* มือถือ */
+@media (max-width: 768px) {
+
+    .reference-popup {
+        width: 94%;
+
+        padding: 35px 20px 25px;
+
+        border-radius: 24px;
+    }
+
+    .reference-popup-heading h2 {
+        font-size: 28px;
+    }
+
+    .reference-item {
+        padding: 16px;
+    }
+}
+/* =====================================================
+   REFERENCE POPUP
+===================================================== */
+
+
+/* ปุ่มแหล่งอ้างอิงใน Footer */
+
+.reference-open {
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #60758D;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.reference-open:hover {
+    color: #263D59;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.reference-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 9999;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+/* แสดง Popup */
+
+.reference-modal.show {
+    display: flex;
+}
+
+
+/* พื้นหลัง */
+
+.reference-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(38, 61, 89, 0.35);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* =====================================================
+   POPUP BOX
+===================================================== */
+
+.reference-popup {
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, 92%);
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 40px 45px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 32px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(38, 61, 89, 0.20);
+}
+
+
+/* ปุ่ม X */
+
+.reference-close {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #F5F8FA;
+
+    color: #263D59;
+
+    font-family: "Sarabun", sans-serif;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.reference-close:hover {
+    background: #FFE1E7;
+}
+
+
+/* =====================================================
+   POPUP HEADING
+===================================================== */
+
+.reference-popup-heading {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.reference-label {
+    display: inline-block;
+
+    padding: 7px 20px;
+    margin-bottom: 12px;
+
+    border-radius: 999px;
+
+    background: #A0E7E5;
+
+    color: #263D59;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+}
+
+
+.reference-popup-heading h2 {
+    margin: 0 0 8px;
+
+    color: #263D59;
+
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+.reference-popup-heading p {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #60758D;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   REFERENCE LIST
+===================================================== */
+
+.reference-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.reference-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    background: #F8FBFC;
+
+    border: 1px solid #E7EEF2;
+    border-radius: 20px;
+}
+
+
+.reference-number {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 14px;
+
+    background: #A0E7E5;
+
+    color: #263D59;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.reference-item > div {
+    flex: 1;
+}
+
+
+.reference-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #263D59;
+
+    font-size: 17px;
+}
+
+
+.reference-item p {
+    margin: 0;
+
+    color: #60758D;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ลิงก์ */
+
+.reference-link {
+    display: inline-block;
+
+    margin-top: 9px;
+
+    color: #299AA5;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.reference-link:hover {
+    color: #263D59;
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .reference-modal {
+        padding: 15px;
+    }
+
+    .reference-popup {
+        width: 100%;
+
+        padding: 35px 20px 25px;
+
+        border-radius: 24px;
+    }
+
+    .reference-popup-heading h2 {
+        font-size: 28px;
+    }
+
+    .reference-item {
+        padding: 16px;
+    }
+
+}

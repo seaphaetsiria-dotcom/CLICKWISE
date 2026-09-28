@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>กิจกรรม | CLICKWISE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="activity-page">
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-icon">
+                🛡️
+            </div>
+
+            <div>
+                <strong>CLICKWISE</strong>
+                <span>เรียนรู้เทคโนโลยีอย่างปลอดภัย</span>
+            </div>
+
+        </a>
+
+
+      <nav class="main-nav">
+
+    <a href="index.html">หน้าแรก</a>
+
+    <a href="student.html">ข้อมูลผู้เรียน</a>
+
+    <a href="guide.html">คำแนะนำ</a>
+
+    <a href="objective.html">จุดประสงค์</a>
+
+    <a href="pretest.html">ก่อนเรียน</a>
+
+    <a href="lesson.html">บทเรียน</a>
+
+    <a href="activity.html">กิจกรรม</a>
+
+    <a href="posttest.html">หลังเรียน</a>
+
+    <a href="creator.html">ผู้จัดทำ</a>
+
+
+</nav>
+</div>
+</header>
+
+
+
+<main class="simulator-page">
+
+
+<!-- =========================================
+     HEADING
+========================================= -->
+
+<section class="simulator-heading">
+
+    <span>DIGITAL SAFETY MISSION</span>
+
+    <h1>
+        ภารกิจนักสืบดิจิทัล
+    </h1>
+
+    <p>
+        ทดลองรับมือกับสถานการณ์ที่อาจเกิดขึ้นจริง
+        และเลือกวิธีใช้งานเทคโนโลยีอย่างปลอดภัย
+    </p>
+
+</section>
+
+
+
+<!-- =========================================
+     PROGRESS
+========================================= -->
+
+<section class="sim-progress">
+
+    <div class="sim-progress-info">
+
+        <span>
+            ความคืบหน้าภารกิจ
+        </span>
+
+        <strong id="simProgressText">
+            0 / 5
+        </strong>
+
+    </div>
+
+
+    <div class="sim-progress-track">
+
+        <div
+            id="simProgressFill"
+            class="sim-progress-fill"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     COMPUTER
+========================================= -->
+
+<section class="computer-shell">
+
+
+    <!-- TOP BAR -->
+
+    <div class="computer-topbar">
+
+        <div class="computer-brand">
+
+            <span class="computer-logo">
+                🛡️
+            </span>
+
+            <div>
+                <strong>CLICKWISE OS</strong>
+                <small>Digital Safety Center</small>
+            </div>
+
+        </div>
+
+
+        <div class="window-controls">
+
+            <span>—</span>
+            <span>□</span>
+            <span>×</span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SCREEN -->
+
+    <div class="computer-screen">
+
+
+        <!-- DESKTOP ICONS -->
+
+        <div class="desktop-icons">
+
+            <div class="desktop-icon">
+                <span>🌐</span>
+                <small>Internet</small>
+            </div>
+
+            <div class="desktop-icon">
+                <span>📧</span>
+                <small>Mail</small>
+            </div>
+
+            <div class="desktop-icon">
+                <span>🛡️</span>
+                <small>Security</small>
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MISSION 1
+        ================================== -->
+
+        <div
+            class="sim-window active"
+            id="simMission1"
+        >
+
+            <div class="popup-titlebar">
+
+                <div>
+                    💬 ข้อความใหม่
+                </div>
+
+                <span>×</span>
+
+            </div>
+
+
+            <div class="popup-body">
+
+                <div class="mission-tag">
+                    MISSION 01
+                </div>
+
+                <div class="chat-user">
+
+                    <div class="chat-avatar">
+                        👤
+                    </div>
+
+                    <div>
+                        <strong>Gamer_254</strong>
+                        <small>ผู้ใช้ที่รู้จักจากเกมออนไลน์</small>
+                    </div>
+
+                </div>
+
+
+                <div class="chat-bubble">
+
+                    สวัสดี เราเล่นเกมด้วยกันมาหลายครั้งแล้ว 😊
+                    ขอเบอร์โทรศัพท์กับที่อยู่บ้านของเธอหน่อยได้ไหม?
+
+                </div>
+
+
+                <p class="sim-question">
+                    นักเรียนจะทำอย่างไร?
+                </p>
+
+
+                <div class="sim-options">
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        📤 ส่งข้อมูลให้
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="true"
+                    >
+                        🛡️ ไม่ให้ข้อมูลและบล็อกผู้ใช้
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        📍 บอกเฉพาะที่อยู่
+                    </button>
+
+                </div>
+
+
+                <div class="sim-feedback"></div>
+
+
+                <button
+                    type="button"
+                    class="sim-next"
+                    data-next="2"
+                    disabled
+                >
+                    ภารกิจต่อไป →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MISSION 2 : PASSWORD
+        ================================== -->
+
+        <div
+            class="sim-window"
+            id="simMission2"
+        >
+
+            <div class="popup-titlebar">
+
+                <div>
+                    🔐 Password Security
+                </div>
+
+                <span>×</span>
+
+            </div>
+
+
+            <div class="popup-body">
+
+                <div class="mission-tag">
+                    MISSION 02
+                </div>
+
+
+                <h2>
+                    สร้างรหัสผ่านที่ปลอดภัย
+                </h2>
+
+
+                <p>
+                    ระบบกำลังให้คุณตั้งรหัสผ่านใหม่
+                    ลองสร้างรหัสผ่านจำลองให้ผ่านเงื่อนไขทั้งหมด
+                </p>
+
+
+                <div class="password-simulator">
+
+                    <label for="simPassword">
+                        New Password
+                    </label>
+
+
+                    <div class="password-input-row">
+
+                        <input
+                            type="text"
+                            id="simPassword"
+                            placeholder="ลองสร้างรหัสผ่าน..."
+                            autocomplete="off"
+                        >
+
+                        <span>
+                            🔑
+                        </span>
+
+                    </div>
+
+
+                    <div class="password-requirements">
+
+                        <div id="simRuleLength">
+                            ○ อย่างน้อย 8 ตัวอักษร
+                        </div>
+
+                        <div id="simRuleUpper">
+                            ○ มีตัวพิมพ์ใหญ่
+                        </div>
+
+                        <div id="simRuleLower">
+                            ○ มีตัวพิมพ์เล็ก
+                        </div>
+
+                        <div id="simRuleNumber">
+                            ○ มีตัวเลข
+                        </div>
+
+                        <div id="simRuleSymbol">
+                            ○ มีสัญลักษณ์พิเศษ
+                        </div>
+
+                    </div>
+
+
+                    <div class="password-strength">
+
+                        <div class="password-strength-track">
+
+                            <div
+                                id="simStrengthFill"
+                                class="password-strength-fill"
+                            ></div>
+
+                        </div>
+
+
+                        <strong id="simStrengthText">
+                            เริ่มสร้างรหัสผ่าน
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="simPasswordFeedback"
+                    class="sim-feedback"
+                ></div>
+
+
+                <button
+                    type="button"
+                    id="simPasswordNext"
+                    class="sim-next"
+                    data-next="3"
+                    disabled
+                >
+                    ภารกิจต่อไป →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MISSION 3 : EMAIL
+        ================================== -->
+
+        <div
+            class="sim-window"
+            id="simMission3"
+        >
+
+            <div class="popup-titlebar">
+
+                <div>
+                    📧 Inbox — ข้อความใหม่
+                </div>
+
+                <span>×</span>
+
+            </div>
+
+
+            <div class="popup-body">
+
+                <div class="mission-tag">
+                    MISSION 03
+                </div>
+
+
+                <div class="email-box">
+
+                    <div class="email-line">
+                        <span>จาก:</span>
+                        <strong>
+                            reward@free-gift-now.xyz
+                        </strong>
+                    </div>
+
+
+                    <div class="email-line">
+                        <span>เรื่อง:</span>
+                        <strong>
+                            🎁 คุณได้รับรางวัล!
+                        </strong>
+                    </div>
+
+
+                    <div class="fake-email-message">
+
+                        🎉 ยินดีด้วย!
+
+                        <br><br>
+
+                        คุณได้รับโทรศัพท์มือถือฟรี
+                        กรุณากดลิงก์ด้านล่างภายใน 5 นาที
+                        และกรอกข้อมูลบัญชีเพื่อยืนยันสิทธิ์
+
+                        <br><br>
+
+                        <span class="fake-link">
+                            รับรางวัลทันที
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="sim-question">
+                    เมื่อได้รับอีเมลแบบนี้ควรทำอย่างไร?
+                </p>
+
+
+                <div class="sim-options">
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        🎁 กดรับรางวัลทันที
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="true"
+                    >
+                        🔎 ไม่กดลิงก์และตรวจสอบผู้ส่ง
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        📤 ส่งต่อให้เพื่อน
+                    </button>
+
+                </div>
+
+
+                <div class="sim-feedback"></div>
+
+
+                <button
+                    type="button"
+                    class="sim-next"
+                    data-next="4"
+                    disabled
+                >
+                    ภารกิจต่อไป →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MISSION 4 : DOWNLOAD
+        ================================== -->
+
+        <div
+            class="sim-window"
+            id="simMission4"
+        >
+
+            <div class="popup-titlebar danger">
+
+                <div>
+                    ⚠️ Download Alert
+                </div>
+
+                <span>×</span>
+
+            </div>
+
+
+            <div class="popup-body">
+
+                <div class="mission-tag">
+                    MISSION 04
+                </div>
+
+
+                <div class="download-alert">
+
+                    <div class="download-icon">
+                        📦
+                    </div>
+
+
+                    <div class="download-info">
+
+                        <small>
+                            กำลังจะเปิดไฟล์
+                        </small>
+
+                        <strong>
+                            Free_Game.exe
+                        </strong>
+
+                        <span>
+                            แหล่งที่มา:
+                            unknown-free-game.xyz
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="security-warning">
+
+                    ⚠️ ไม่สามารถยืนยันความปลอดภัย
+                    ของไฟล์หรือแหล่งที่มานี้ได้
+
+                </div>
+
+
+                <p class="sim-question">
+                    คุณต้องการทำอะไร?
+                </p>
+
+
+                <div class="sim-options two">
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        ▶ เปิดไฟล์
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="true"
+                    >
+                        ✕ ยกเลิกการดาวน์โหลด
+                    </button>
+
+                </div>
+
+
+                <div class="sim-feedback"></div>
+
+
+                <button
+                    type="button"
+                    class="sim-next"
+                    data-next="5"
+                    disabled
+                >
+                    ภารกิจต่อไป →
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             MISSION 5
+        ================================== -->
+
+        <div
+            class="sim-window"
+            id="simMission5"
+        >
+
+            <div class="popup-titlebar security">
+
+                <div>
+                    🛡️ SAFE TECH SECURITY
+                </div>
+
+                <span>×</span>
+
+            </div>
+
+
+            <div class="popup-body">
+
+                <div class="mission-tag">
+                    FINAL MISSION
+                </div>
+
+
+                <div class="final-shield">
+                    🛡️
+                </div>
+
+
+                <h2>
+                    Security Challenge
+                </h2>
+
+
+                <div class="security-notification">
+
+                    <strong>
+                        📎 พบไฟล์แนบจากผู้ส่งที่ไม่รู้จัก
+                    </strong>
+
+                    <p>
+                        ข้อความระบุว่า
+                        “เปิดไฟล์นี้เพื่อรับของรางวัลพิเศษ”
+                    </p>
+
+                </div>
+
+
+                <p class="sim-question">
+                    การตัดสินใจใดปลอดภัยที่สุด?
+                </p>
+
+
+                <div class="sim-options">
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        📂 เปิดไฟล์เพื่อดูเนื้อหา
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="false"
+                    >
+                        💾 ดาวน์โหลดเก็บไว้ก่อน
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="sim-choice"
+                        data-correct="true"
+                    >
+                        🛡️ ไม่เปิดไฟล์และตรวจสอบผู้ส่ง
+                    </button>
+
+                </div>
+
+
+                <div class="sim-feedback"></div>
+
+
+                <button
+                    type="button"
+                    id="finishSimulator"
+                    class="sim-finish"
+                    disabled
+                >
+                    🏆 เสร็จสิ้นภารกิจ
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================
+             COMPLETE SCREEN
+        ================================== -->
+
+        <div
+            id="simComplete"
+            class="sim-complete"
+        >
+
+            <div class="complete-shield">
+                🏆
+            </div>
+
+
+            <span>
+                MISSION COMPLETE
+            </span>
+
+
+            <h2>
+                ภารกิจสำเร็จ!
+            </h2>
+
+
+            <p>
+                คุณผ่านการฝึกตัดสินใจ
+                เพื่อใช้งานเทคโนโลยีอย่างปลอดภัย
+                ครบทั้ง 5 ภารกิจแล้ว
+            </p>
+
+
+            <div class="complete-score">
+
+                <small>
+                    ภารกิจที่ผ่าน
+                </small>
+
+                <strong>
+                    5 / 5
+                </strong>
+
+            </div>
+
+
+            <a
+                href="posttest.html"
+                class="sim-posttest-btn"
+            >
+                ทำแบบทดสอบหลังเรียน →
+            </a>
+
+        </div>
+
+
+
+        <!-- TASK BAR -->
+
+        <div class="computer-taskbar">
+
+            <div>
+                🛡️ SAFE TECH
+            </div>
+
+            <div id="simClock">
+                DIGITAL SAFETY
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            <strong>CLICKWISE</strong>
+            <span>เรียนรู้เทคโนโลยีอย่างปลอดภัย</span>
+        </div>
+
+        <div class="footer-links">
+
+            <button
+                type="button"
+                class="reference-open"
+                onclick="openReference()"
+            >
+                แหล่งอ้างอิง
+            </button>
+
+            <span>•</span>
+
+            <a href="creator.html">
+                ผู้จัดทำ
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     REFERENCE POPUP
+========================================= -->
+
+<div
+    class="reference-modal"
+    id="referenceModal"
+>
+
+    <!-- คลิกพื้นหลังเพื่อปิด -->
+    <div
+        class="reference-overlay"
+        onclick="closeReference()"
+    ></div>
+
+
+    <div class="reference-popup">
+
+        <!-- ปุ่มปิด -->
+        <button
+            type="button"
+            class="reference-close"
+            onclick="closeReference()"
+            aria-label="ปิด"
+        >
+            ×
+        </button>
+
+
+        <!-- หัวข้อ -->
+        <div class="reference-popup-heading">
+
+            <span class="reference-label">
+                REFERENCES
+            </span>
+
+            <h2>
+                แหล่งอ้างอิง
+            </h2>
+
+            <p>
+                แหล่งข้อมูลและสื่อที่ใช้ประกอบการจัดทำบทเรียน
+                เรื่อง ความปลอดภัยในการใช้งานเทคโนโลยีสารสนเทศ
+            </p>
+
+        </div>
+
+
+        <!-- รายการอ้างอิง -->
+        <div class="reference-list">
+
+
+            <!-- 01 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    01
+                </span>
+
+                <div>
+
+                    <strong>
+                        สื่อวิดีโอประกอบบทเรียน
+                    </strong>
+
+                    <p>
+                        วิดีโอจาก YouTube ใช้ประกอบการเรียนรู้
+                        เกี่ยวกับความปลอดภัยและการใช้งานอินเทอร์เน็ต
+                    </p>
+
+                    <a
+                        href="https://youtu.be/K8zFT2v99gg?si=ees-YeCsHO6YlIqx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    02
+                </span>
+
+                <div>
+
+                    <strong>
+                        สื่อวิดีโอประกอบบทเรียน
+                    </strong>
+
+                    <p>
+                        วิดีโอจาก YouTube ใช้ประกอบเนื้อหา
+                        เรื่องความปลอดภัยในการใช้งานเทคโนโลยีสารสนเทศ
+                    </p>
+
+                    <a
+                        href="https://youtu.be/qfJZNGuVdIw?si=51EcJH9w8ktWTAIR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    03
+                </span>
+
+                <div>
+
+                    <strong>
+                        หนังสือและเอกสารประกอบการเรียนรู้
+                    </strong>
+
+                    <p>
+                        เอกสารออนไลน์จาก PUBHTML5
+                        ใช้เป็นแหล่งข้อมูลประกอบเนื้อหาภายในบทเรียน
+                    </p>
+
+                    <a
+                        href="https://online.pubhtml5.com/upse/wwzj/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

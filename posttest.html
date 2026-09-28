@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แบบทดสอบหลังเรียน | CLICKWISE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startQuiz('posttest')">
+
+<header class="header">
+<div class="header-inner">
+
+<a href="index.html" class="logo">
+<div class="logo-icon">🛡️</div>
+<div>
+<strong>CLICKWISE</strong>
+<small>เรียนรู้เทคโนโลยีอย่างปลอดภัย</small>
+</div>
+</a>
+
+<nav class="main-nav">
+
+    <a href="index.html">หน้าแรก</a>
+
+    <a href="student.html">ข้อมูลผู้เรียน</a>
+
+    <a href="guide.html">คำแนะนำ</a>
+
+    <a href="objective.html">จุดประสงค์</a>
+
+    <a href="pretest.html">ก่อนเรียน</a>
+
+    <a href="lesson.html">บทเรียน</a>
+
+    <a href="activity.html">กิจกรรม</a>
+
+    <a href="posttest.html">หลังเรียน</a>
+
+    <a href="creator.html">ผู้จัดทำ</a>
+
+
+</nav>
+</div>
+</header>
+
+
+<main class="container quiz-box">
+<div class="quiz-heading-box">
+
+    <span class="quiz-label">
+        POST-TEST
+    </span>
+
+    <h1>
+        แบบทดสอบหลังเรียน
+    </h1>
+
+    <p>
+        จำนวน 10 ข้อ เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว
+    </p>
+
+</div>
+
+
+<!-- ข้อมูลนักเรียน -->
+<div id="studentInfo" class="student-bar"></div>
+
+
+<!-- แถบความคืบหน้า -->
+<div class="quiz-progress">
+
+    <div class="progress-track">
+
+        <div
+            id="progressFill"
+            class="progress-fill"
+            style="width:10%">
+        </div>
+
+    </div>
+
+</div>
+<div class="question-card">
+
+<span
+id="questionNumber"
+class="question-number">
+ข้อ 1 / 10
+</span>
+
+<h2 id="questionText">
+กำลังโหลดคำถาม...
+</h2>
+
+<div id="answers" class="answers"></div>
+
+
+<div class="quiz-actions">
+
+<button
+id="prevBtn"
+class="secondary-btn"
+onclick="previousQuestion()">
+← ย้อนกลับ
+</button>
+
+<button
+id="nextBtn"
+class="primary-btn"
+onclick="nextQuestion()">
+ข้อต่อไป →
+</button>
+
+</div>
+
+</div>
+
+</main>
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            <strong>CLICKWISE</strong>
+            <span>เรียนรู้เทคโนโลยีอย่างปลอดภัย</span>
+        </div>
+
+        <div class="footer-links">
+
+            <button
+                type="button"
+                class="reference-open"
+                onclick="openReference()"
+            >
+                แหล่งอ้างอิง
+            </button>
+
+            <span>•</span>
+
+            <a href="creator.html">
+                ผู้จัดทำ
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     REFERENCE POPUP
+========================================= -->
+
+<div
+    class="reference-modal"
+    id="referenceModal"
+>
+
+    <!-- คลิกพื้นหลังเพื่อปิด -->
+    <div
+        class="reference-overlay"
+        onclick="closeReference()"
+    ></div>
+
+
+    <div class="reference-popup">
+
+        <!-- ปุ่มปิด -->
+        <button
+            type="button"
+            class="reference-close"
+            onclick="closeReference()"
+            aria-label="ปิด"
+        >
+            ×
+        </button>
+
+
+        <!-- หัวข้อ -->
+        <div class="reference-popup-heading">
+
+            <span class="reference-label">
+                REFERENCES
+            </span>
+
+            <h2>
+                แหล่งอ้างอิง
+            </h2>
+
+            <p>
+                แหล่งข้อมูลและสื่อที่ใช้ประกอบการจัดทำบทเรียน
+                เรื่อง ความปลอดภัยในการใช้งานเทคโนโลยีสารสนเทศ
+            </p>
+
+        </div>
+
+
+        <!-- รายการอ้างอิง -->
+        <div class="reference-list">
+
+
+            <!-- 01 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    01
+                </span>
+
+                <div>
+
+                    <strong>
+                        สื่อวิดีโอประกอบบทเรียน
+                    </strong>
+
+                    <p>
+                        วิดีโอจาก YouTube ใช้ประกอบการเรียนรู้
+                        เกี่ยวกับความปลอดภัยและการใช้งานอินเทอร์เน็ต
+                    </p>
+
+                    <a
+                        href="https://youtu.be/K8zFT2v99gg?si=ees-YeCsHO6YlIqx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    02
+                </span>
+
+                <div>
+
+                    <strong>
+                        สื่อวิดีโอประกอบบทเรียน
+                    </strong>
+
+                    <p>
+                        วิดีโอจาก YouTube ใช้ประกอบเนื้อหา
+                        เรื่องความปลอดภัยในการใช้งานเทคโนโลยีสารสนเทศ
+                    </p>
+
+                    <a
+                        href="https://youtu.be/qfJZNGuVdIw?si=51EcJH9w8ktWTAIR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+            <div class="reference-item">
+
+                <span class="reference-number">
+                    03
+                </span>
+
+                <div>
+
+                    <strong>
+                        หนังสือและเอกสารประกอบการเรียนรู้
+                    </strong>
+
+                    <p>
+                        เอกสารออนไลน์จาก PUBHTML5
+                        ใช้เป็นแหล่งข้อมูลประกอบเนื้อหาภายในบทเรียน
+                    </p>
+
+                    <a
+                        href="https://online.pubhtml5.com/upse/wwzj/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="reference-link"
+                    >
+                        เปิดแหล่งข้อมูล ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
